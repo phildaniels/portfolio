@@ -1,7 +1,17 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-base-300";
-const href = "mailto:" + "contact." + "phil" + "@" + "danielsdev." + "cloud";
+const href =
+  "mail" +
+  "to" +
+  ":" +
+  "contact." +
+  "phil" +
+  "@" +
+  "daniels" +
+  "dev" +
+  "." +
+  "cloud";
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
@@ -12,7 +22,7 @@ const href = "mailto:" + "contact." + "phil" + "@" + "danielsdev." + "cloud";
   <li>
     <a
       class="py-3 text-base"
-      href="mailto:contact.phil@danielsdev.cloud"
+      href={href}
       target="_blank"
       referrerpolicy="no-referrer-when-downgrade">Contact</a
     >

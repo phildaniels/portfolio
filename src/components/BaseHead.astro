@@ -49,7 +49,7 @@ const { title, description, ogType = "website" } = Astro.props;
       theme = "dracula";
     }
 
-    html.setAttribute("data-theme", theme ?? "cupcake");
+    html.setAttribute("data-theme", theme ?? "cupcake"); 
     localStorage.setItem("theme", theme ?? "cupcake");
   }
 
