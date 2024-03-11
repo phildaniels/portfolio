@@ -1,26 +1,26 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-import TimeLineElement from '../components/cv/TimeLine.astro'
-const email = 'phil' + '@' + 'daniels' + 'dev' + '.' + 'cloud'
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TimeLineElement from '../components/cv/TimeLine.astro';
+const email = 'phil' + '@' + 'daniels' + 'dev' + '.' + 'cloud';
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
 	<div class="mb-5">
 		<div class="w-full text-center text-3xl font-bold">Phil Daniels</div>
-		<div class="w-full text-center">
+		<div class="w-full text-center text-lg">
 			{email} | Windsor, Colorado
 		</div>
 	</div>
 
-	<div class="mb-10 w-full text-center">
+	<div class="mb-10 w-full text-center text-lg">
 		<i>Full Stack, Cloud First, Software Engineer</i>
 	</div>
 
 	<div class="mb-5">
-		<div class="w-full text-3xl font-bold">Experience</div>
+		<div class="w-full text-2xl font-bold">Experience</div>
 	</div>
 
-	<div class="time-line-container mb-10">
+	<div class="time-line-container mb-5">
 		<TimeLineElement
 			title="Senior Software Engineer"
 			start="May 2023"
@@ -29,48 +29,51 @@ const email = 'phil' + '@' + 'daniels' + 'dev' + '.' + 'cloud'
 			city="Windsor"
 			state="CO"
 		>
-			<li>
-				I am a Fullstack Engineer, Leader, and Decision maker for the Platform Engineering team;
-				tools and tech used every day include <b><i>Terraform</i></b>, <b><i>Typescript</i></b>, <b
-					><i>React</i></b
-				>, <i><b>.NET</b></i>, and <b><i>Go</i></b>, hosted in <b><i>AWS</i></b> and <b
-					><i>Azure</i></b
-				>.
-			</li>
-			<li>
-				Launched <i>Stargate</i>, a React based Micro-frontend hosting solution for Ensemble
-				applications. Reduced technical debt by collapsing multiple applications into a single
-				platform, increasing user productivity and improving application change time to market.
-				Leveraged <b><i>Terraform</i></b>, <b><i>React</i></b>, <b><i>Go</i></b>, and <b
-					><i>Cloud Storage</i></b
-				>. Decreased frontend hosting costs for organization by <i>30%</i>.
-			</li>
-			<li>
-				Designed and Developed <i>Locksmith</i>, a <b><i>GraphQL</i></b> based user and identity management
-				platform, using <b><i>NextJs</i></b>, <b><i>Durable/Step Functions</i></b>, <b
-					><i>MongoDB</i></b
-				>; integrated with Ensemble’s Identity as a Service provider. Pattern implemented
-				organization wide and leveraged by <i>Stargate</i>. Accelerated launch of new applications.
-			</li>
-			<li>
-				Led development of new Customer Onboarding system, using <b><i>React</i></b>, <b
-					><i>Node</i></b
-				>, API Gateways, <b><i>MongoDB</i></b>
-				and <b><i>SQL</i></b>. Simplified Customer Onboarding experience for Ensemble Clients.
-			</li>
-			<li>
-				Delivered <i>Emissary</i>, a Organizational Notifications engine, using <b>
-					<i> Event-Driven Architecture </i>
-				</b>, <b><i>Cloud Message Delivery</i></b>, and <b><i>Cloud Functions</i></b>. Unified
-				disparate notification delivery at Ensemble and streamlined adding push, email, and channel
-				notifications to future and current applications.
-			</li>
-			<li>
-				Created <i>Insignia</i> an Organizational, Client Side Authentication library. Used tools and
-				technologies like <b><i>React</i></b>, <b><i>OAuth</i></b>, and <b><i>Vite</i></b>.
-				Alongside <i>Locksmith</i>, this significantly reduced client side boiler-plate for the
-				organization and simplified Authentication and Authorization for Application teams.
-			</li>
+			<ul class="mx-6 mb-10 grid list-disc gap-2">
+				<li class="text-lg">
+					I am a Fullstack Engineer, Leader, and Decision maker for the Platform Engineering team;
+					tools and tech used every day include <b><i>Terraform</i></b>, <b><i>Typescript</i></b>, <b
+						><i>React</i></b
+					>, <i><b>.NET</b></i>, and <b><i>Go</i></b>, hosted in <b><i>AWS</i></b> and <b
+						><i>Azure</i></b
+					>.
+				</li>
+				<li class="text-lg">
+					Launched <i>Stargate</i>, a React based Micro-frontend hosting solution for Ensemble
+					applications. Reduced technical debt by collapsing multiple applications into a single
+					platform, increasing user productivity and improving application change time to market.
+					Leveraged <b><i>Terraform</i></b>, <b><i>React</i></b>, <b><i>Go</i></b>, and <b
+						><i>Cloud Storage</i></b
+					>. Decreased frontend hosting costs for organization by <i>30%</i>.
+				</li>
+				<li class="text-lg">
+					Designed and Developed <i>Locksmith</i>, a <b><i>GraphQL</i></b> based user and identity management
+					platform, using <b><i>NextJs</i></b>, <b><i>Durable/Step Functions</i></b>, <b
+						><i>MongoDB</i></b
+					>; integrated with Ensemble’s Identity as a Service provider. Pattern implemented
+					organization wide and leveraged by <i>Stargate</i>. Accelerated launch of new
+					applications.
+				</li>
+				<li class="text-lg">
+					Led development of new Customer Onboarding system, using <b><i>React</i></b>, <b
+						><i>Node</i></b
+					>, <b><i>API Gateways</i></b>, <b><i>MongoDB</i></b>
+					and <b><i>SQL</i></b>. Simplified Customer Onboarding experience for Ensemble Clients.
+				</li>
+				<li class="text-lg">
+					Delivered <i>Emissary</i>, a Organizational Notifications engine, using <b>
+						<i> Event-Driven Architecture </i>
+					</b>, <b><i>Cloud Message Delivery</i></b>, and <b><i>Cloud Functions</i></b>. Unified
+					disparate notification delivery at Ensemble and streamlined adding push, email, and
+					channel notifications to future and current applications.
+				</li>
+				<li class="text-lg">
+					Created <i>Insignia</i> an Organizational, Client Side Authentication library. Used tools and
+					technologies like <b><i>React</i></b>, <b><i>OAuth</i></b>, and <b><i>Vite</i></b>.
+					Alongside <i>Locksmith</i>, this significantly reduced client side boiler-plate for the
+					organization and simplified Authentication and Authorization for Application teams.
+				</li>
+			</ul>
 		</TimeLineElement>
 		<TimeLineElement
 			title="Senior Software Developer"
@@ -80,89 +83,121 @@ const email = 'phil' + '@' + 'daniels' + 'dev' + '.' + 'cloud'
 			city="Laramie"
 			state="WY"
 		>
-			<li>
-				Technical Leader, Mentor, and Pull Request Reviewer for an ecosystem of applications
-				containing 3 Agile teams.
-			</li>
-			<li>
-				Led refactoring of existing On-Prem Monolith into Micro-service Architecture, using Docker
-				and Kubernetes. Collaborated with Partner teams (DevOps/SRE) to decrease operational,
-				hosting, and development costs by <li>400k/year</li>
-			</li>
-			<li>
-				Reworked legacy mission critical product, with Angular, SQL, and .NET, increasing user
-				sentiment scores by 20%
-			</li>
-			<li>
-				Developed mobile application and PWA using React Native and Firebase, increasing staff
-				productivity <i>50%</i>
-			</li>
-			<li>
-				Migrated Sharepoint Search to AI Driven Search, increasing performance and app SLA from 99%
-				to <i>99.99%</i>
-			</li>
-			<li>
-				Migrated On-Prem SQL Server infrastructure to Cloud SQL, and implemented Application
-				Performance Monitoring. Decreased storage costs <i>30%</i>
-			</li>
+			<ul class="mx-6 mb-5 grid list-disc gap-2">
+				<li class="text-lg">
+					Technical Leader, Mentor, and Pull Request Reviewer for an ecosystem of applications
+					containing 3 Agile teams.
+				</li>
+				<li class="text-lg">
+					Led refactoring of existing On-Prem Monolith into <b><i>Micro-Service Architecture</i></b
+					>, using
+					<b><i>Docker </i></b>and <b><i>Kubernetes</i></b>. Collaborated with Partner teams
+					(DevOps/SRE) to decrease operational, hosting, and development costs by <i>400k/year</i>
+				</li>
+				<li class="text-lg">
+					Reworked legacy mission critical product, with <b><i>Angular</i></b>, <b><i>SQL</i></b>,
+					and
+					<b><i>.NET</i></b>, increasing user sentiment scores by <i>20%</i>
+				</li>
+				<li class="text-lg">
+					Developed mobile application and PWA using <b><i>React Native</i></b> and <b
+						><i>Firebase</i></b
+					>, increasing staff productivity <i>50%</i>
+				</li>
+				<li class="text-lg">
+					Migrated Sharepoint Search to AI Driven Search (Azure Cognitive), increasing performance
+					and app SLA from 99% to <i>99.99%</i>
+				</li>
+				<li class="text-lg">
+					Migrated On-Prem SQL Server infrastructure to <b><i>Cloud SQL</i></b>, and implemented
+					<b><i>Application Performance Monitoring</i></b>. Decreased storage costs <i>30%</i>
+				</li>
+			</ul>
 		</TimeLineElement>
 	</div>
 
 	<div class="mb-5">
-		<div class="w-full text-3xl font-bold">Education</div>
+		<div class="w-full text-2xl font-bold">Skills</div>
+	</div>
+
+	<div class="mx-6 mb-10">
+		<div class="text-xl"><b><i>Languages</i></b></div>
+		<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
+			<li class="text-lg">JavaScript</li>
+			<li class="text-lg">TypeScript</li>
+			<li class="text-lg">C#</li>
+			<li class="text-lg">SQL</li>
+			<li class="text-lg">Go</li>
+			<li class="text-lg">HTML</li>
+			<li class="text-lg">CSS</li>
+		</ul>
+		<div class="text-xl"><b><i>Frameworks</i></b></div>
+		<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
+			<li class="text-lg">React.js</li>
+			<li class="text-lg">React Native</li>
+			<li class="text-lg">Next.js</li>
+			<li class="text-lg">Astro.js</li>
+			<li class="text-lg">Angular</li>
+			<li class="text-lg">Node</li>
+			<li class="text-lg">.NET 5-9+</li>
+		</ul>
+		<div class="text-xl"><b><i>Tools</i></b></div>
+		<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
+			<li class="text-lg">Azure</li>
+			<li class="text-lg">AWS</li>
+			<li class="text-lg">Firebase</li>
+			<li class="text-lg">Docker</li>
+			<li class="text-lg">Kubernetes</li>
+			<li class="text-lg">Terraform</li>
+			<li class="text-lg">Azure Pipelines</li>
+			<li class="text-lg">Github Actions</li>
+			<li class="text-lg">Azure DevOps</li>
+			<li class="text-lg">VS Code</li>
+		</ul>
+		<div class="text-xl"><b><i>Libraries</i></b></div>
+		<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
+			<li class="text-lg">Mocha</li>
+			<li class="text-lg">Jest</li>
+			<li class="text-lg">Chai</li>
+			<li class="text-lg">Express.js</li>
+			<li class="text-lg">Tailwind</li>
+			<li class="text-lg">Redux</li>
+			<li class="text-lg">GraphQL</li>
+			<li class="text-lg">Jotai</li>
+			<li class="text-lg">XUnit</li>
+			<li class="text-lg">Entity Framework</li>
+		</ul>
+	</div>
+
+	<div class="mb-5">
+		<div class="w-full text-2xl font-bold">Education</div>
 	</div>
 
 	<div class="time-line-container mb-10 grid gap-4">
 		<TimeLineElement
-			title="Title"
-			start="20XX"
-			end="20XX"
-			organization="Organization"
-			city="City"
-			state="ST"
-		/>
-		<TimeLineElement
-			title="Title"
-			start="20XX"
-			end="20XX"
-			organization="Organization"
-			city="City"
-			state="ST"
+			title="B.S. Computer Science"
+			start="2012"
+			end="2016"
+			organization="University of Wyoming"
+			city="Laramie"
+			state="WY"
+			excludeVerticalBar={true}
 		/>
 	</div>
 
 	<div class="mb-5">
-		<div class="w-full text-3xl font-bold">Certifications</div>
+		<div class="w-full text-2xl font-bold">Certifications</div>
 	</div>
 
 	<ul class="mx-6 mb-10 grid list-disc gap-2">
 		<li>
-			<a href="#" target="_blank"> Certification Name (with link)</a>
+			<a
+				href="https://learn.microsoft.com/api/credentials/share/en-us/PhilDaniels-8865/D4C04AE4BF752C28?sharingId=30F08C18EEE9EC8A"
+				target="_blank"
+				class="underline hover:text-blue-500"
+			>
+				Microsoft Certified: Azure Developer Associate (AZ 204)
+			</a>
 		</li>
-		<li>
-			<a href="#" target="_blank"> Certification Name (with link)</a>
-		</li>
-	</ul>
-
-	<div class="mb-5">
-		<div class="w-full text-3xl font-bold">Skills</div>
-	</div>
-
-	<ul class="mx-6 list-disc columns-2 md:columns-5">
-		<li>Skill Name</li>
-		<li>Skill Name</li>
-		<li>Skill Name</li>
-		<li>Skill Name</li>
-		<li>Skill Name</li>
-		<li>Skill Name</li>
-		<li>Skill Name</li>
-		<li>Skill Name</li>
-		<li>Skill Name</li>
-		<li>Skill Name</li>
-		<li>Skill Name</li>
-		<li>Skill Name</li>
-		<li>Skill Name</li>
-		<li>Skill Name</li>
-		<li>Skill Name</li>
 	</ul>
 </BaseLayout>
