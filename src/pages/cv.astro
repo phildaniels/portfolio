@@ -5,11 +5,11 @@ const email = 'phil' + '@' + 'daniels' + 'dev' + '.' + 'cloud';
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-	<div class="btn mt-8 mb-5">
-            <a href="/Phil-Daniels_Resume_2024.pdf" download="Phil-Daniels_Resume_2024.pdf" target="_blank">
-                Click Here to Download
-            </a>
-        </div>
+	<div class="btn mb-5 mt-8">
+		<a href="/Phil-Daniels_Resume_2024.pdf" download="Phil-Daniels_Resume_2024.pdf" target="_blank">
+			Click Here to Download
+		</a>
+	</div>
 
 	<div class="mb-5">
 		<div class="w-full text-center text-3xl font-bold">Phil Daniels</div>
@@ -19,7 +19,10 @@ const email = 'phil' + '@' + 'daniels' + 'dev' + '.' + 'cloud';
 	</div>
 
 	<div class="mb-10 w-full text-center text-lg">
-		<i>Full Stack, Cloud First, Software Engineer</i>
+		<i
+			>Full Stack Software Engineer specializing in Scalable Micro-services, Cloud First Designs,
+			and Front End Excellence</i
+		>
 	</div>
 
 	<div class="mb-5">
@@ -29,15 +32,58 @@ const email = 'phil' + '@' + 'daniels' + 'dev' + '.' + 'cloud';
 	<div class="time-line-container mb-5">
 		<TimeLineElement
 			title="Senior Software Engineer"
-			start="May 2023"
+			start="May 2024"
 			end="Present"
+			organization="Microsoft"
+			city="Windsor"
+			state="CO"
+		>
+			<ul class="mx-6 mb-10 grid list-disc gap-2">
+				<li class="text-lg">
+					Senior, Fullstack Engineer for <i>Microsoft Power Automate</i> (<a
+						class="underline"
+						href="https://aka.ms/powerautomate"
+						target="_blank">https://aka.ms/powerautomate</a
+					>) a globally distributed automation platform with <i>~12 million</i> monthly active users,
+					and <i>tens of billions</i> customer automation runs / per month. Tools and tech used every
+					day include <b><i>React</i></b>, <i><b>.NET</b></i>, and <b><i>Azure</i></b>.
+				</li>
+				<li class="text-lg">
+					Developed AI Driven features utilizing <i><b>Large Language Models</b></i> (LLMs), such as
+					<i><b>GPT 4.0</b></i> to enhance user productivity.
+				</li>
+				<li class="text-lg">
+					Delivered platform Administration/Governance enhancements, increasing sales and adoption
+					by Fortune 500 customers.
+				</li>
+				<li class="text-lg">
+					Crafted integrations with Microsoft Flagship Apps, such as <b><i>Copilot</i></b>, <b
+						><i>Teams</i></b
+					>, <b><i>SharePoint</i></b>, <b><i>Dataverse</i></b>
+					and many others, enabling enhanced productivity and user satisfaction for first party experiences
+				</li>
+				<li class="text-lg">
+					Implemented system <b><i>observability</i></b> and proactive monitoring of critical customer
+					scenarios and features, reducing customer support tickets and increasing customer satisfaction
+					by actively monitoring SLA.
+				</li>
+				<li class="text-lg">Contributed to open-source repositories utilized by product</li>
+				<li class="text-lg">
+					Resolved Livesite production issues for customers, maintaining a <i>99.9%</i> SLA
+				</li>
+			</ul>
+		</TimeLineElement>
+		<TimeLineElement
+			title="Senior Software Engineer"
+			start="May 2023"
+			end="April 2024"
 			organization="Ensemble Health Partners"
 			city="Windsor"
 			state="CO"
 		>
 			<ul class="mx-6 mb-10 grid list-disc gap-2">
 				<li class="text-lg">
-					I am a Fullstack Engineer, Leader, and Decision maker for the Platform Engineering team;
+					I was a Fullstack Engineer, Leader, and Decision maker for the Platform Engineering team;
 					tools and tech used every day include <b><i>Terraform</i></b>, <b><i>Typescript</i></b>, <b
 						><i>React</i></b
 					>, <i><b>.NET</b></i>, and <b><i>Go</i></b>, hosted in <b><i>AWS</i></b> and <b
@@ -45,39 +91,20 @@ const email = 'phil' + '@' + 'daniels' + 'dev' + '.' + 'cloud';
 					>.
 				</li>
 				<li class="text-lg">
-					Launched <i>Stargate</i>, a React based Micro-frontend hosting solution for Ensemble
-					applications. Reduced technical debt by collapsing multiple applications into a single
-					platform, increasing user productivity and improving application change time to market.
-					Leveraged <b><i>Terraform</i></b>, <b><i>React</i></b>, <b><i>Go</i></b>, and <b
-						><i>Cloud Storage</i></b
-					>. Decreased frontend hosting costs for organization by <i>30%</i>.
+					Launched a React based Micro-frontend hosting solution for Ensemble applications. Reduced
+					technical debt by collapsing multiple applications into a single platform, increasing user
+					productivity and improving application change time to market. Leveraged <b
+						><i>Terraform</i></b
+					>, <b><i>React</i></b>, <b><i>Go</i></b>, and <b><i>Cloud Storage</i></b>. Decreased
+					frontend hosting costs for organization by <i>30%</i>.
 				</li>
 				<li class="text-lg">
-					Designed and Developed <i>Locksmith</i>, a <b><i>GraphQL</i></b> based user and identity management
-					platform, using <b><i>NextJs</i></b>, <b><i>Durable/Step Functions</i></b>, <b
-						><i>MongoDB</i></b
-					>; integrated with Ensemble’s Identity as a Service provider. Pattern implemented
+					Designed and Developed a <b><i>GraphQL</i></b> based user and identity management platform,
+					using
+					<b><i>Next.JS</i></b>, <b><i>Serverless Functions</i></b>, and <b><i>MongoDB</i></b>;
+					integrated with Ensemble’s Identity as a Service provider. Pattern implemented
 					organization wide and leveraged by <i>Stargate</i>. Accelerated launch of new
 					applications.
-				</li>
-				<li class="text-lg">
-					Led development of new Customer Onboarding system, using <b><i>React</i></b>, <b
-						><i>Node</i></b
-					>, <b><i>API Gateways</i></b>, <b><i>MongoDB</i></b>
-					and <b><i>SQL</i></b>. Simplified Customer Onboarding experience for Ensemble Clients.
-				</li>
-				<li class="text-lg">
-					Delivered <i>Emissary</i>, a Organizational Notifications engine, using <b>
-						<i> Event-Driven Architecture </i>
-					</b>, <b><i>Cloud Message Delivery</i></b>, and <b><i>Cloud Functions</i></b>. Unified
-					disparate notification delivery at Ensemble and streamlined adding push, email, and
-					channel notifications to future and current applications.
-				</li>
-				<li class="text-lg">
-					Created <i>Insignia</i> an Organizational, Client Side Authentication library. Used tools and
-					technologies like <b><i>React</i></b>, <b><i>OAuth</i></b>, and <b><i>Vite</i></b>.
-					Alongside <i>Locksmith</i>, this significantly reduced client side boiler-plate for the
-					organization and simplified Authentication and Authorization for Application teams.
 				</li>
 			</ul>
 		</TimeLineElement>
@@ -101,22 +128,9 @@ const email = 'phil' + '@' + 'daniels' + 'dev' + '.' + 'cloud';
 					(DevOps/SRE) to decrease operational, hosting, and development costs by <i>400k/year</i>
 				</li>
 				<li class="text-lg">
-					Reworked legacy mission critical product, with <b><i>Angular</i></b>, <b><i>SQL</i></b>,
-					and
-					<b><i>.NET</i></b>, increasing user sentiment scores by <i>20%</i>
-				</li>
-				<li class="text-lg">
 					Developed mobile application and PWA using <b><i>React Native</i></b> and <b
 						><i>Firebase</i></b
 					>, increasing staff productivity <i>50%</i>
-				</li>
-				<li class="text-lg">
-					Migrated Sharepoint Search to AI Driven Search (Azure Cognitive), increasing performance
-					and app SLA from 99% to <i>99.99%</i>
-				</li>
-				<li class="text-lg">
-					Migrated On-Prem SQL Server infrastructure to <b><i>Cloud SQL</i></b>, and implemented
-					<b><i>Application Performance Monitoring</i></b>. Decreased storage costs <i>30%</i>
 				</li>
 			</ul>
 		</TimeLineElement>
@@ -133,19 +147,18 @@ const email = 'phil' + '@' + 'daniels' + 'dev' + '.' + 'cloud';
 			<li class="text-lg">TypeScript</li>
 			<li class="text-lg">C#</li>
 			<li class="text-lg">SQL</li>
+			<li class="text-lg">Rust</li>
 			<li class="text-lg">Go</li>
-			<li class="text-lg">HTML</li>
-			<li class="text-lg">CSS</li>
 		</ul>
 		<div class="text-xl"><b><i>Frameworks</i></b></div>
 		<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
-			<li class="text-lg">React.js</li>
+			<li class="text-lg">React</li>
 			<li class="text-lg">React Native</li>
 			<li class="text-lg">Next.js</li>
 			<li class="text-lg">Astro.js</li>
 			<li class="text-lg">Angular</li>
 			<li class="text-lg">Node</li>
-			<li class="text-lg">.NET 5-9+</li>
+			<li class="text-lg">.NET</li>
 		</ul>
 		<div class="text-xl"><b><i>Tools</i></b></div>
 		<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
@@ -169,6 +182,7 @@ const email = 'phil' + '@' + 'daniels' + 'dev' + '.' + 'cloud';
 			<li class="text-lg">Tailwind</li>
 			<li class="text-lg">Redux</li>
 			<li class="text-lg">GraphQL</li>
+			<li class="text-lg">Playwright</li>
 			<li class="text-lg">Jotai</li>
 			<li class="text-lg">XUnit</li>
 			<li class="text-lg">Entity Framework</li>
