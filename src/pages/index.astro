@@ -5,9 +5,10 @@ import ProjectsList from '../components/ProjectsList.astro';
 import { getCollection } from 'astro:content';
 import createSlug from '../lib/createSlug';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const collection = await getCollection('blog');
+const posts = collection
+	.filter((post) => post.data.pubDate < new Date())
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const last_posts = posts.slice(0, 3);
 
@@ -45,7 +46,7 @@ const mailTo = 'mailto:' + 'phil' + '@' + 'danielsdev' + '.cloud';
 
 	<ProjectsList />
 
-	<!-- <div>
+	<div>
 		<div class="mb-5 mt-10 w-full text-3xl font-bold">Latest from blog</div>
 	</div>
 
@@ -63,5 +64,5 @@ const mailTo = 'mailto:' + 'phil' + '@' + 'danielsdev' + '.cloud';
 				<div class="divider my-0" />
 			</>
 		))
-	} -->
+	}
 </BaseLayout>

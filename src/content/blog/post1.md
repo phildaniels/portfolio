@@ -1,7 +1,7 @@
 ---
 title: 'Building a Serverless Discord Bot with Azure Functions'
 description: 'Using Azure Functions to create a cheap, Serverless discord bot'
-pubDate: 'Mar 23 2024'
+pubDate: 'Mar 23 2025'
 heroImage: '/post_img.webp'
 tags: ['Azure', 'Serverless', 'Discord']
 ---
