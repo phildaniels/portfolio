@@ -1,7 +1,7 @@
 ---
 title: 'Advent of Code 2024: Day 2'
 description: 'Day two of advent of code'
-pubDate: 'Jan 1 2024'
+pubDate: 'Jan 1 2025'
 heroImage: '/advent_of_code_2024.webp'
 tags: ['aoc', '2024', 'typescript', 'bun']
 ---
