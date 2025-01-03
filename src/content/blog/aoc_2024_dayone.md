@@ -1,5 +1,5 @@
 ---
-title: 'Advent of Code: Day 1'
+title: 'Advent of Code 2024: Day 1'
 description: 'Day one of advent of code and project setup'
 pubDate: 'Dec 29 2024'
 heroImage: '/advent_of_code_2024.webp'
