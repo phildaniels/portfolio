@@ -10,7 +10,7 @@ tags: ['aoc', '2024', 'typescript', 'bun']
 
 ## The Problem
 
-Last time ([Advent of Code 2024: Day 2](./advent-of-code-2024-day-2)), we had to write a validator for some number sequences. Today we have to strip valid text out of invalid text.
+Last time ([Advent of Code 2024: Day 2](/blog/advent-of-code-2024-day-2)), we had to write a validator for some number sequences. Today we have to strip valid text out of invalid text.
 
 ## Part One
 

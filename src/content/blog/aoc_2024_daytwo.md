@@ -10,7 +10,7 @@ tags: ['aoc', '2024', 'typescript', 'bun']
 
 ## Modularizing the days
 
-Last time ([Advent of Code 2024: Day 1](./advent-of-code-2024-day-1)), I talked about how I planned to have an orchestration layer that printed all the days. Nothing is intensive enough to cache answers (yet), but here's a crack at that modularization
+Last time ([Advent of Code 2024: Day 1](/blog/advent-of-code-2024-day-1)), I talked about how I planned to have an orchestration layer that printed all the days. Nothing is intensive enough to cache answers (yet), but here's a crack at that modularization
 
 ```typescript
 import dayOne from "./dayone";
