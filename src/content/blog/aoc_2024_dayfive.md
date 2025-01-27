@@ -1,5 +1,5 @@
 ---
-title: 'Advent of Code 2024: Day 4'
+title: 'Advent of Code 2024: Day 5'
 description: 'Day three of advent of code'
 pubDate: 'Jan 7 2025'
 heroImage: '/advent_of_code_2024.webp'
