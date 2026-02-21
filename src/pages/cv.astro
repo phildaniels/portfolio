@@ -5,219 +5,182 @@ const email = 'phil' + '@' + 'daniels' + 'dev' + '.' + 'cloud';
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-	<div class="btn mb-5 mt-8">
-		<a href="/Phil-Daniels_Resume_2026.pdf" download="Phil-Daniels_Resume_2026.pdf" target="_blank">
-			Click Here to Download
-		</a>
-	</div>
+<div class="btn mb-5 mt-8">
+<a href="/Phil-Daniels_Resume_2026.pdf" download="Phil-Daniels_Resume_2026.pdf" target="_blank">
+Click Here to Download
+</a>
+</div>
 
-	<div class="mb-5">
-		<div class="w-full text-center text-3xl font-bold">Phil Daniels</div>
-		<div class="w-full text-center text-lg">
-			{email} | Windsor, Colorado
-		</div>
-	</div>
+<div class="mb-5">
+<div class="w-full text-center text-3xl font-bold">Phil Daniels</div>
+<div class="w-full text-center text-lg">
+{email} | (303) 532 9389 | Windsor, Colorado
+</div>
+<div class="w-full text-center text-lg">
+<a class="underline" href="https://github.com/phildaniels" target="_blank">https://github.com/phildaniels</a> |
+<a class="underline" href="https://www.linkedin.com/in/phillip-daniels" target="_blank">https://www.linkedin.com/in/phillip-daniels</a> |
+<a class="underline" href="https://danielsdev.cloud" target="_blank">https://danielsdev.cloud</a>
+</div>
+</div>
 
-	<div class="mb-10 w-full text-center text-lg">
-		<i
-			>Full Stack Software Engineer specializing in Scalable Micro-services, Cloud First Designs,
-			and Front End Excellence</i
-		>
-	</div>
+<div class="mb-10 w-full text-center text-lg">
+<i>Frontend and Full Stack Software Engineer specializing in shipping AI driven experiences to millions of users</i>
+</div>
 
-	<div class="mb-5">
-		<div class="w-full text-2xl font-bold">Experience</div>
-	</div>
+<div class="mb-5">
+<div class="w-full text-2xl font-bold">Professional Experience</div>
+</div>
 
-	<div class="time-line-container mb-5">
-		<TimeLineElement
-			title="Senior Software Engineer"
-			start="May 2024"
-			end="Present"
-			organization="Microsoft"
-			city="Windsor"
-			state="CO"
-		>
-			<ul class="mx-6 mb-10 grid list-disc gap-2">
-				<li class="text-lg">
-					Senior, Fullstack Engineer for <i>Microsoft Power Automate</i> (<a
-						class="underline"
-						href="https://aka.ms/powerautomate"
-						target="_blank">https://aka.ms/powerautomate</a
-					>) a globally distributed automation platform with <i>~12 million</i> monthly active users,
-					and <i>tens of billions</i> customer automation runs / per month. Tools and tech used every
-					day include <b><i>React</i></b>, <i><b>.NET</b></i>, and <b><i>Azure</i></b>.
-				</li>
-				<li class="text-lg">
-					Developed AI Driven features utilizing <i><b>Large Language Models</b></i> (LLMs), such as
-					<i><b>GPT 4.0</b></i> to enhance user productivity.
-				</li>
-				<li class="text-lg">
-					Delivered platform Administration/Governance enhancements, increasing sales and adoption
-					by Fortune 500 customers.
-				</li>
-				<li class="text-lg">
-					Crafted integrations with Microsoft Flagship Apps, such as <b><i>Copilot</i></b>, <b
-						><i>Teams</i></b
-					>, <b><i>SharePoint</i></b>, <b><i>Dataverse</i></b>
-					and many others, enabling enhanced productivity and user satisfaction for first party experiences
-				</li>
-				<li class="text-lg">
-					Implemented system <b><i>observability</i></b> and proactive monitoring of critical customer
-					scenarios and features, reducing customer support tickets and increasing customer satisfaction
-					by actively monitoring SLA.
-				</li>
-				<li class="text-lg">Contributed to open-source repositories utilized by product</li>
-				<li class="text-lg">
-					Resolved Livesite production issues for customers, maintaining a <i>99.9%</i> SLA
-				</li>
-			</ul>
-		</TimeLineElement>
-		<TimeLineElement
-			title="Senior Software Engineer"
-			start="May 2023"
-			end="April 2024"
-			organization="Ensemble Health Partners"
-			city="Windsor"
-			state="CO"
-		>
-			<ul class="mx-6 mb-10 grid list-disc gap-2">
-				<li class="text-lg">
-					I was a Fullstack Engineer, Leader, and Decision maker for the Platform Engineering team;
-					tools and tech used every day include <b><i>Terraform</i></b>, <b><i>Typescript</i></b>, <b
-						><i>React</i></b
-					>, <i><b>.NET</b></i>, and <b><i>Go</i></b>, hosted in <b><i>AWS</i></b> and <b
-						><i>Azure</i></b
-					>.
-				</li>
-				<li class="text-lg">
-					Launched a React based Micro-frontend hosting solution for Ensemble applications. Reduced
-					technical debt by collapsing multiple applications into a single platform, increasing user
-					productivity and improving application change time to market. Leveraged <b
-						><i>Terraform</i></b
-					>, <b><i>React</i></b>, <b><i>Go</i></b>, and <b><i>Cloud Storage</i></b>. Decreased
-					frontend hosting costs for organization by <i>30%</i>.
-				</li>
-				<li class="text-lg">
-					Designed and Developed a <b><i>GraphQL</i></b> based user and identity management platform,
-					using
-					<b><i>Next.JS</i></b>, <b><i>Serverless Functions</i></b>, and <b><i>MongoDB</i></b>;
-					integrated with Ensemble’s Identity as a Service provider. Pattern implemented
-					organization wide and leveraged by <i>Stargate</i>. Accelerated launch of new
-					applications.
-				</li>
-			</ul>
-		</TimeLineElement>
-		<TimeLineElement
-			title="Senior Software Developer"
-			start="Feb 2017"
-			end="May 2023"
-			organization="UL Solutions"
-			city="Laramie"
-			state="WY"
-		>
-			<ul class="mx-6 mb-5 grid list-disc gap-2">
-				<li class="text-lg">
-					Technical Leader, Mentor, and Pull Request Reviewer for an ecosystem of applications
-					containing 3 Agile teams.
-				</li>
-				<li class="text-lg">
-					Led refactoring of existing On-Prem Monolith into <b><i>Micro-Service Architecture</i></b
-					>, using
-					<b><i>Docker </i></b>and <b><i>Kubernetes</i></b>. Collaborated with Partner teams
-					(DevOps/SRE) to decrease operational, hosting, and development costs by <i>400k/year</i>
-				</li>
-				<li class="text-lg">
-					Developed mobile application and PWA using <b><i>React Native</i></b> and <b
-						><i>Firebase</i></b
-					>, increasing staff productivity <i>50%</i>
-				</li>
-			</ul>
-		</TimeLineElement>
-	</div>
+<div class="time-line-container mb-5">
+<TimeLineElement
+title="Senior Software Engineer"
+start="May 2024"
+end="Present"
+organization="Microsoft"
+city="Windsor"
+state="CO"
+>
+<ul class="mx-6 mb-10 grid list-disc gap-2">
+<li class="text-lg">
+Currently on a <b><i>Frontend Engineering</i></b> team building <b><i>Workflows Agent</i></b>, an agent in <b><i>M365 Copilot</i></b>
+that can be used to automate work using natural language (<a
+class="underline"
+href="https://aka.ms/workflowsagentgs"
+target="_blank">https://aka.ms/workflowsagentgs</a
+>) Tools and tech used every day include <b><i>React</i></b>, <i><b>.NET</b></i>, and <b><i>Azure</i></b>.
+</li>
+<li class="text-lg">
+Developed AI Driven features utilizing <i><b>Large Language Models</b></i> (LLMs), and Agents to enhance user productivity
+</li>
+<li class="text-lg">Implemented <b><i>Observability</i></b> and proactively monitoring features.</li>
+<li class="text-lg">Contributed to open source repositories utilized by product</li>
+<li class="text-lg">
+Resolved Livesite (On-call / SRE duties) production issues for customers. Livesite champion
+for team, analyzed and decreased wakeup calls for team by <i>50%</i> and decreased Incidents
+per day by <i>20%</i>
+</li>
+<li class="text-lg">
+Guided and mentored team in Frontend excellence; Member of Frontend Expert Group within
+organization with special ownership over frontend repo.
+</li>
+</ul>
+</TimeLineElement>
+<TimeLineElement
+title="Senior Software Engineer"
+start="June 2023"
+end="April 2024"
+organization="Ensemble Health Partners"
+city="Windsor"
+state="CO"
+>
+<ul class="mx-6 mb-10 grid list-disc gap-2">
+<li class="text-lg">
+Fullstack Engineer, Leader, and Decision maker for the Platform Engineering team; tools and
+tech used every day include <b><i>Terraform</i></b>, <b><i>TypeScript</i></b>, <b
+><i>React</i></b
+>, <i><b>.NET</b></i>, and <b><i>Go</i></b>, hosted in <b><i>AWS</i></b> and <b
+><i>Azure</i></b
+>.
+</li>
+<li class="text-lg">
+Launched a custom React based Micro-frontend hosting solution for Ensemble applications.
+Reduced technical debt by collapsing multiple applications into a single platform,
+increasing user productivity and improving application change time to market. Leveraged <b
+><i>Terraform</i></b
+>, <b><i>React</i></b>, <b><i>Go</i></b>, and <b><i>Cloud Storage</i></b>. Decreased
+frontend hosting costs for organization by <i>30%</i>.
+</li>
+<li class="text-lg">
+Designed and Developed a <b><i>GraphQL</i></b> based user and identity management platform,
+using <b><i>NextJS</i></b>, <b><i>Serverless Functions</i></b>, and <b><i>MongoDB</i></b>;
+integrated with Ensemble's Identity as a Service provider. Pattern implemented organization
+wide and leveraged by Hosting Solution. Accelerated launch of new applications.
+</li>
+</ul>
+</TimeLineElement>
+<TimeLineElement
+title="Senior Software Developer"
+start="Feb 2017"
+end="June 2023"
+organization="UL Solutions"
+city="Laramie"
+state="WY"
+>
+<ul class="mx-6 mb-5 grid list-disc gap-2">
+<li class="text-lg">
+Technical Leader and Mentor for an ecosystem of applications containing 3 Agile teams.
+</li>
+<li class="text-lg">
+Led refactoring of existing On-Prem Monolith into <b><i>Micro-service Architecture</i></b
+>, using <b><i>Docker</i></b> and <b><i>Kubernetes</i></b>. Collaborated with Partner teams
+(DevOps/SRE) to decrease operational, hosting, and development costs by <i>400k/year</i>
+</li>
+<li class="text-lg">
+Developed mobile application and PWA using <b><i>React Native</i></b> and <b
+><i>Firebase</i></b
+>, increasing staff productivity <i>50%</i>
+</li>
+</ul>
+</TimeLineElement>
+</div>
 
-	<div class="mb-5">
-		<div class="w-full text-2xl font-bold">Skills</div>
-	</div>
+<div class="mb-5">
+<div class="w-full text-2xl font-bold">Skills</div>
+</div>
 
-	<div class="mx-6 mb-10">
-		<div class="text-xl"><b><i>Languages</i></b></div>
-		<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
-			<li class="text-lg">JavaScript</li>
-			<li class="text-lg">TypeScript</li>
-			<li class="text-lg">C#</li>
-			<li class="text-lg">SQL</li>
-			<li class="text-lg">Rust</li>
-			<li class="text-lg">Go</li>
-		</ul>
-		<div class="text-xl"><b><i>Frameworks</i></b></div>
-		<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
-			<li class="text-lg">React</li>
-			<li class="text-lg">React Native</li>
-			<li class="text-lg">Next.js</li>
-			<li class="text-lg">Astro.js</li>
-			<li class="text-lg">Angular</li>
-			<li class="text-lg">Node</li>
-			<li class="text-lg">.NET</li>
-		</ul>
-		<div class="text-xl"><b><i>Tools</i></b></div>
-		<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
-			<li class="text-lg">Azure</li>
-			<li class="text-lg">AWS</li>
-			<li class="text-lg">Firebase</li>
-			<li class="text-lg">Docker</li>
-			<li class="text-lg">Kubernetes</li>
-			<li class="text-lg">Terraform</li>
-			<li class="text-lg">Azure Pipelines</li>
-			<li class="text-lg">Github Actions</li>
-			<li class="text-lg">Azure DevOps</li>
-			<li class="text-lg">VS Code</li>
-		</ul>
-		<div class="text-xl"><b><i>Libraries</i></b></div>
-		<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
-			<li class="text-lg">Mocha</li>
-			<li class="text-lg">Jest</li>
-			<li class="text-lg">Chai</li>
-			<li class="text-lg">Express.js</li>
-			<li class="text-lg">Tailwind</li>
-			<li class="text-lg">Redux</li>
-			<li class="text-lg">GraphQL</li>
-			<li class="text-lg">Playwright</li>
-			<li class="text-lg">Jotai</li>
-			<li class="text-lg">XUnit</li>
-			<li class="text-lg">Entity Framework</li>
-		</ul>
-	</div>
+<div class="mx-6 mb-10">
+<div class="text-xl"><b><i>Languages</i></b></div>
+<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
+<li class="text-lg">JavaScript</li>
+<li class="text-lg">TypeScript</li>
+<li class="text-lg">C#</li>
+<li class="text-lg">SQL</li>
+<li class="text-lg">Rust</li>
+<li class="text-lg">Go</li>
+</ul>
+<div class="text-xl"><b><i>Frameworks</i></b></div>
+<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
+<li class="text-lg">React</li>
+<li class="text-lg">React Native</li>
+<li class="text-lg">NextJS</li>
+<li class="text-lg">Node</li>
+<li class="text-lg">.NET</li>
+</ul>
+<div class="text-xl"><b><i>Tools</i></b></div>
+<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
+<li class="text-lg">Azure</li>
+<li class="text-lg">AWS</li>
+<li class="text-lg">Firebase</li>
+<li class="text-lg">Docker</li>
+<li class="text-lg">Kubernetes</li>
+<li class="text-lg">Terraform</li>
+<li class="text-lg">Github Actions</li>
+</ul>
+<div class="text-xl"><b><i>Libraries</i></b></div>
+<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
+<li class="text-lg">Mocha</li>
+<li class="text-lg">Jest</li>
+<li class="text-lg">Chai</li>
+<li class="text-lg">Tailwind</li>
+<li class="text-lg">Redux</li>
+<li class="text-lg">GraphQL</li>
+<li class="text-lg">Playwright</li>
+</ul>
+</div>
 
-	<div class="mb-5">
-		<div class="w-full text-2xl font-bold">Education</div>
-	</div>
+<div class="mb-5">
+<div class="w-full text-2xl font-bold">Education</div>
+</div>
 
-	<div class="time-line-container mb-10 grid gap-4">
-		<TimeLineElement
-			title="B.S. Computer Science"
-			start="2012"
-			end="2016"
-			organization="University of Wyoming"
-			city="Laramie"
-			state="WY"
-			excludeVerticalBar={true}
-		/>
-	</div>
-
-	<div class="mb-5">
-		<div class="w-full text-2xl font-bold">Certifications</div>
-	</div>
-
-	<ul class="mx-6 mb-10 grid list-disc gap-2">
-		<li>
-			<a
-				href="https://learn.microsoft.com/api/credentials/share/en-us/PhilDaniels-8865/D4C04AE4BF752C28?sharingId=30F08C18EEE9EC8A"
-				target="_blank"
-				class="underline hover:text-blue-500"
-			>
-				Microsoft Certified: Azure Developer Associate (AZ 204)
-			</a>
-		</li>
-	</ul>
+<div class="time-line-container mb-10 grid gap-4">
+<TimeLineElement
+title="B.S., Computer Science"
+start="Aug 2012"
+end="Dec 2016"
+organization="University of Wyoming"
+city="Laramie"
+state="WY"
+excludeVerticalBar={true}
+/>
+</div>
 </BaseLayout>
