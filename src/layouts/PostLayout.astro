@@ -13,8 +13,8 @@ import { Image } from 'astro:assets';
 ---
 
 <BaseLayout title={title} description={description} ogType="article">
-	<div class="flex justify-center">
-		<article class="prose prose-lg prose-headings:tracking-tight prose-a:text-primary max-w-[48rem] prose-img:mx-auto">
+	<div class="flex min-w-0 justify-center">
+		<article class="blog-post prose prose-lg prose-headings:tracking-tight prose-a:text-primary w-full min-w-0 max-w-[48rem] prose-img:mx-auto">
 			<a href="/blog" class="mb-8 inline-flex text-sm font-semibold no-underline">
 				← Back to writing
 			</a>
@@ -50,3 +50,39 @@ import { Image } from 'astro:assets';
 		</article>
 	</div>
 </BaseLayout>
+
+<style>
+	.blog-post {
+		overflow-wrap: anywhere;
+	}
+
+	.blog-post :global(pre) {
+		width: 100%;
+		max-width: 100%;
+		overflow-x: auto;
+		overscroll-behavior-inline: contain;
+	}
+
+	.blog-post :global(pre code) {
+		overflow-wrap: normal;
+		word-break: normal;
+	}
+
+	.blog-post :global(:not(pre) > code),
+	.blog-post :global(a) {
+		overflow-wrap: anywhere;
+		word-break: break-word;
+	}
+
+	.blog-post :global(img),
+	.blog-post :global(video),
+	.blog-post :global(iframe),
+	.blog-post :global(table) {
+		max-width: 100%;
+	}
+
+	.blog-post :global(table) {
+		display: block;
+		overflow-x: auto;
+	}
+</style>
