@@ -41,7 +41,52 @@ const terminalUrl = '/argentum-terminal/index.html';
 		<h2 id="browser-terminal-heading" class="sr-only">
 			Argentum browser terminal
 		</h2>
-		<div class="terminal-embed surface-card overflow-hidden">
+		<div class="mobile-terminal surface-card p-6 sm:hidden">
+			<div class="flex items-start gap-4">
+				<div class="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-secondary/30 bg-secondary/10 font-mono font-bold text-secondary">
+					Ag
+				</div>
+				<div>
+					<p class="eyebrow">Mobile experience</p>
+					<h2 class="mt-2 text-2xl font-bold tracking-tight">Run Argentum full screen</h2>
+				</div>
+			</div>
+			<p class="mt-5 leading-7 text-base-content/68">
+				The real TUI works on mobile, but it is most usable outside the portfolio chrome. Launch it
+				full screen, rotate to landscape when possible, then press Enter to start the dashboard.
+			</p>
+			<ol class="mt-5 grid gap-3 text-sm text-base-content/65">
+				<li class="flex gap-3">
+					<span class="font-mono font-bold text-primary">01</span>
+					<span>Open the terminal in its own tab.</span>
+				</li>
+				<li class="flex gap-3">
+					<span class="font-mono font-bold text-primary">02</span>
+					<span>Use landscape orientation for more chart columns.</span>
+				</li>
+				<li class="flex gap-3">
+					<span class="font-mono font-bold text-primary">03</span>
+					<span>Tap the terminal and use the displayed keyboard controls.</span>
+				</li>
+			</ol>
+			<a class="btn btn-primary mt-6 w-full" href={terminalUrl} target="_blank">
+				Launch full-screen terminal ↗
+			</a>
+
+			<details class="mt-4 rounded-xl border border-base-content/10 bg-base-200/45">
+				<summary class="cursor-pointer px-4 py-3 text-sm font-semibold">Run inline instead</summary>
+				<div class="mobile-inline-terminal border-t border-base-content/10">
+					<iframe
+						src={terminalUrl}
+						title="Interactive Argentum mobile browser terminal"
+						loading="lazy"
+						allow="clipboard-write"
+					></iframe>
+				</div>
+			</details>
+		</div>
+
+		<div class="terminal-embed surface-card hidden overflow-hidden sm:block">
 			<iframe
 				src={terminalUrl}
 				title="Interactive Argentum browser terminal"
@@ -70,10 +115,15 @@ const terminalUrl = '/argentum-terminal/index.html';
 		border: 0;
 	}
 
-	@media (max-width: 640px) {
-		.terminal-embed {
-			height: 42rem;
-			border-radius: 0.8rem;
-		}
+	.mobile-inline-terminal {
+		height: min(38rem, 72dvh);
+		background: #21222c;
+	}
+
+	.mobile-inline-terminal iframe {
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: 0;
 	}
 </style>
