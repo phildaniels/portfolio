@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101417" />
+    <meta
+      name="description"
+      content="Argentum running as a real Linux terminal application inside your browser."
+    />
+    <title>Argentum — browser terminal</title>
+    <link rel="stylesheet" href="./xterm.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="chrome">
+        <div class="identity">
+          <span class="mark" aria-hidden="true">Ag</span>
+          <div>
+            <h1>Argentum</h1>
+            <p>TUI for markets</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <div class="theme-toggle" aria-label="Terminal theme">
+            <button type="button" data-terminal-theme="windows">Windows</button>
+            <button type="button" data-terminal-theme="mac">macOS</button>
+            <button type="button" data-terminal-theme="linux">Ubuntu</button>
+          </div>
+          <div class="runtime-state">
+            <span class="pulse" aria-hidden="true"></span>
+            <span id="status">Initializing browser runtime</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="terminal-frame" aria-label="Argentum terminal">
+        <div class="terminal-titlebar" aria-hidden="true">
+          <div class="window-controls">
+            <span></span><span></span><span></span>
+          </div>
+          <strong id="terminal-caption"></strong>
+        </div>
+        <div id="terminal"></div>
+      </section>
+
+      <footer>
+        <a href="https://github.com/phildaniels/argentum" target="_blank" rel="noreferrer">
+          https://github.com/phildaniels/argentum
+        </a>
+      </footer>
+    </main>
+    <script type="module" src="./boot.js"></script>
+  </body>
+</html>

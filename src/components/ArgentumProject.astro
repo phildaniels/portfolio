@@ -1,0 +1,84 @@
+---
+const projectUrl = '/projects/argentum/';
+const repositoryUrl = 'https://github.com/phildaniels/argentum';
+---
+
+<article class="surface-card interactive-card relative overflow-hidden">
+	<a
+		href={projectUrl}
+		class="absolute inset-0 z-10 rounded-[inherit]"
+		aria-label="Try Argentum in the browser"
+	></a>
+
+	<div class="pointer-events-none flex flex-col items-stretch lg:flex-row">
+		<div
+			class="terminal-preview relative w-full overflow-hidden bg-[#282a36] text-[#f8f8f2] lg:w-[45%] lg:shrink-0"
+			aria-label="Preview of the Argentum terminal dashboard"
+		>
+			<div class="flex items-center gap-1.5 border-b border-white/10 bg-white/[0.03] px-4 py-3">
+				<span class="h-2.5 w-2.5 rounded-full bg-[#ff79c6]"></span>
+				<span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"></span>
+				<span class="h-2.5 w-2.5 rounded-full bg-[#69ff94]"></span>
+				<span class="ml-2 truncate font-mono text-[0.68rem] text-slate-400">
+					$ argentum msft aapl btc
+				</span>
+			</div>
+			<div class="grid grid-cols-2 gap-2 p-4 font-mono text-[0.7rem]">
+				<div class="rounded-md border border-[#69ff94]/25 bg-[#69ff94]/[0.04] p-3">
+					<div class="flex justify-between font-bold">
+						<span>MSFT</span>
+						<span class="text-[#69ff94]">+1.24%</span>
+					</div>
+					<div class="mt-1 text-base">$•••.••</div>
+					<div class="mt-3 overflow-hidden whitespace-nowrap text-[#69ff94]">⠀⠀⢀⡠⠔⠒⠉⠉⠉⠑⢄</div>
+				</div>
+				<div class="rounded-md border border-[#69ff94]/25 bg-[#69ff94]/[0.04] p-3">
+					<div class="flex justify-between font-bold">
+						<span>AAPL</span>
+						<span class="text-[#69ff94]">+0.68%</span>
+					</div>
+					<div class="mt-1 text-base">$•••.••</div>
+					<div class="mt-3 overflow-hidden whitespace-nowrap text-[#69ff94]">⢀⣀⠤⠒⠉⠑⠢⣀⡠⠊</div>
+				</div>
+				<div class="col-span-2 rounded-md border border-[#ff79c6]/25 bg-[#ff79c6]/[0.04] p-3">
+					<div class="flex justify-between font-bold">
+						<span>BTC-USD</span>
+						<span class="text-[#ff79c6]">-0.31%</span>
+					</div>
+					<div class="mt-1 text-base">$••,•••.••</div>
+					<div class="mt-3 overflow-hidden whitespace-nowrap text-[#ff79c6]">⠉⠢⡀⠀⠀⢀⠔⠉⠢⣀⠤⠊</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex grow flex-col justify-center p-6 sm:p-8">
+			<div class="mb-3 flex flex-wrap items-center gap-2">
+				<h3 class="text-2xl font-bold tracking-tight">Argentum</h3>
+				<span class="badge badge-secondary badge-sm font-semibold">FOSS</span>
+				<span class="badge badge-outline badge-sm">Featured</span>
+			</div>
+			<p class="leading-relaxed text-base-content/75">
+				An interactive, glanceable market dashboard for the terminal with responsive quote tiles,
+				Braille charts, saved dashboards, keyboard and mouse controls, and live polling.
+			</p>
+			<p class="mt-3 text-sm leading-relaxed text-base-content/55">
+				Run the real browser-terminal build directly in this portfolio. It uses xterm.js and a Web
+				Worker, with no backend, remote shell, API key, or runtime CDN.
+			</p>
+			<div class="pointer-events-auto relative z-20 mt-5 flex flex-wrap gap-2">
+				<a class="btn btn-primary btn-sm" href={projectUrl}>
+					Try it out
+				</a>
+				<a class="btn btn-ghost btn-sm" href={repositoryUrl} target="_blank" rel="noreferrer">
+					View source ↗
+				</a>
+			</div>
+			<div class="mt-5 flex flex-wrap gap-2">
+				<span class="badge badge-outline badge-sm">TypeScript</span>
+				<span class="badge badge-outline badge-sm">React</span>
+				<span class="badge badge-outline badge-sm">OpenTUI</span>
+				<span class="badge badge-outline badge-sm">Bun</span>
+			</div>
+		</div>
+	</div>
+</article>

@@ -5,35 +5,54 @@ import ProjectsList from '../components/ProjectsList.astro';
 ---
 
 <BaseLayout title="Projects" sideBarActiveItemID="projects">
-	<div>
-		<div class="mb-5 w-full text-3xl font-bold">Projects I work on outside of work</div>
-	</div>
+	<header class="reveal mb-12 max-w-3xl">
+		<p class="eyebrow">Projects</p>
+		<h1 class="mt-4 text-5xl font-extrabold tracking-[-0.05em] sm:text-6xl">
+			Things I build and contribute to.
+		</h1>
+		<p class="section-copy mt-6 text-lg">
+			A selection of open-source tools, developer experiences, and side projects spanning terminal
+			UIs, extensions, and creative coding.
+		</p>
+	</header>
 
-	<ProjectsList />
+	<section class="reveal reveal-delay-1" aria-labelledby="personal-projects">
+		<h2 id="personal-projects" class="sr-only">
+			Personal projects
+		</h2>
+		<ProjectsList />
+	</section>
 
-	<div>
-		<div class="mb-5 mt-10 w-full text-3xl font-bold">Recent Open Source Contributions</div>
-	</div>
-
-	<HorizontalCard
-		title="Azure Logic Apps UX"
-		desc="A cloud platform where you can create and run automated workflows with little to no code"
-		url="https://github.com/Azure/LogicAppsUX"
-		badge="FOSS"
-	/>
-	<div class="divider my-0"></div>
-	<HorizontalCard
-		title="Piral"
-		desc="Framework for next generation web apps using micro frontends. 🚀"
-		url="https://github.com/smapiot/piral"
-		badge="FOSS"
-	/>
-	<div class="divider my-0"></div>
-	<HorizontalCard
-		title="Azure Docs"
-		desc="Open source documentation of Microsoft Azure"
-		url="https://github.com/MicrosoftDocs/azure-docs"
-		badge="FOSS"
-	/>
-	<div class="divider my-0"></div>
+	<section class="reveal reveal-delay-2 mt-20" aria-labelledby="open-source">
+		<p class="eyebrow">Community</p>
+		<h2 id="open-source" class="section-heading mb-8 mt-3">
+			Open-source contributions
+		</h2>
+		<div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+			<HorizontalCard
+				title="Azure Logic Apps UX"
+				desc="A platform for creating and running automated cloud workflows with little to no code."
+				url="https://github.com/Azure/LogicAppsUX"
+				badge="FOSS"
+			/>
+			<HorizontalCard
+				title="Piral"
+				desc="A framework for next-generation web applications built with micro frontends."
+				url="https://github.com/smapiot/piral"
+				badge="FOSS"
+			/>
+			<HorizontalCard
+				title="Azure Docs"
+				desc="Open-source technical documentation for the Microsoft Azure platform."
+				url="https://github.com/MicrosoftDocs/azure-docs"
+				badge="FOSS"
+			/>
+			<HorizontalCard
+				title="Splashboard"
+				desc="Added GitHub Enterprise host, API, avatar, and remote URL support with regression coverage."
+				url="https://github.com/unhappychoice/splashboard/pull/279"
+				badge="FOSS"
+			/>
+		</div>
+	</section>
 </BaseLayout>

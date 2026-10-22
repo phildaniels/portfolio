@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import dashboard from '../assets/tempus/dashboard.png';
+
+const projectUrl = '/projects/tempus/';
+---
+
+<article class="surface-card interactive-card relative overflow-hidden">
+	<a
+		href={projectUrl}
+		class="absolute inset-0 z-10 rounded-[inherit]"
+		aria-label="View the Tempus project showcase"
+	></a>
+
+	<div class="pointer-events-none flex flex-col items-stretch lg:flex-row">
+		<div class="relative min-h-72 w-full overflow-hidden border-b border-base-content/10 bg-[#21222c] lg:min-h-96 lg:w-[45%] lg:shrink-0 lg:border-b-0 lg:border-r">
+			<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,color-mix(in_oklab,var(--color-primary)_22%,transparent),transparent_58%)]"></div>
+			<Image
+				src={dashboard}
+				alt="Tempus dashboard showing scheduled Copilot-powered repository prompts and recent runs"
+				class="absolute left-[5%] top-8 w-[90%] rounded-t-xl border border-white/10 shadow-2xl"
+				width={902}
+				quality={82}
+			/>
+		</div>
+
+		<div class="flex grow flex-col justify-center p-6 sm:p-8">
+			<div class="mb-3 flex flex-wrap items-center gap-2">
+				<h3 class="text-2xl font-bold tracking-tight">Tempus</h3>
+				<span class="badge badge-primary badge-sm font-semibold">Featured</span>
+				<span class="badge badge-outline badge-sm">Private source</span>
+			</div>
+			<p class="leading-relaxed text-base-content/75">
+				A cloud prompt scheduler for dependable, recurring Copilot-powered repository work with
+				on-demand execution and detailed run observability.
+			</p>
+			<p class="mt-3 text-sm leading-relaxed text-base-content/55">
+				Built at Microsoft with Next.js and the Copilot SDK. The showcase focuses on the product
+				experience because the source code cannot be shared.
+			</p>
+			<div class="pointer-events-auto relative z-20 mt-5">
+				<a class="btn btn-primary btn-sm" href={projectUrl}>
+					View showcase
+				</a>
+			</div>
+			<div class="mt-5 flex flex-wrap gap-2">
+				<span class="badge badge-outline badge-sm">Next.js</span>
+				<span class="badge badge-outline badge-sm">Copilot SDK</span>
+				<span class="badge badge-outline badge-sm">Cloud automation</span>
+			</div>
+		</div>
+	</div>
+</article>

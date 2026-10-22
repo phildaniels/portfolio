@@ -1,33 +1,33 @@
 ---
+import ArgentumProject from './ArgentumProject.astro';
 import HorizontalCard from './HorizontalCard.astro';
+import LicensingReportProject from './LicensingReportProject.astro';
+import TempusProject from './TempusProject.astro';
+import WorkflowsProject from './WorkflowsProject.astro';
 ---
 
-<HorizontalCard
-	title="Advent of Code"
-	img="/advent_of_code_2024.webp"
-	desc="My advent of code solutions in TypeScript. Golang, and Rust."
-	url="https://github.com/phildaniels/advent-of-code"
-	tags={['TypeScript', 'Rust', 'Golang', 'Algorithms']}
-/>
-<div class="divider my-0"></div>
-<HorizontalCard
-	title="VSCode Extension: Line Number Utils"
-	img="/line_number_utils.webp"
-	desc='VSCode Utilities for inserting and copying line numbers during single and multi-cursor editing. Similar utility to extensions like "Turbo Console Log" but more general and works for general editing'
-	url="https://marketplace.visualstudio.com/items?itemName=PhilDanielsIO.vscode-line-number-utils"
-	badge="FOSS"
-	tags={['VSCode', 'Extension']}
-/>
-<div class="divider my-0"></div>
-<HorizontalCard
-	title="VSCode Extension: Retro Sunset Theme"
-	img="/retro_sunset.webp"
-	desc="A VSCode theme inspired by the retro sunsets of the 80s."
-	url="https://marketplace.visualstudio.com/items?itemName=PhilDanielsIO.retro-sunset-theme"
-	badge="FOSS"
-	tags={['VSCode', 'Theme']}
-/>
-<div class="divider my-0"></div>
+<div class="grid gap-5">
+	<WorkflowsProject />
+	<TempusProject />
+	<LicensingReportProject />
+	<ArgentumProject />
+	<HorizontalCard
+		title="VS Code Extension: Line Number Utils"
+		img="/line_number_utils.webp"
+		desc="Utilities for inserting and copying line numbers during single and multi-cursor editing."
+		url="https://marketplace.visualstudio.com/items?itemName=PhilDanielsIO.vscode-line-number-utils"
+		badge="FOSS"
+		tags={['VS Code', 'Extension']}
+	/>
+	<HorizontalCard
+		title="VS Code Extension: Retro Sunset Theme"
+		img="/retro_sunset.webp"
+		desc="A VS Code theme inspired by the vibrant retro sunsets of the 80s."
+		url="https://marketplace.visualstudio.com/items?itemName=PhilDanielsIO.retro-sunset-theme"
+		badge="FOSS"
+		tags={['VS Code', 'Theme']}
+	/>
+</div>
 <!-- <HorizontalCard
 		title="The Find It Game!"
 		img="/the_find_it_game.webp"

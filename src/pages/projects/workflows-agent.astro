@@ -1,0 +1,173 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import workflowsHome from '../../assets/workflows-agent/home.png';
+import workflowDesigner from '../../assets/workflows-agent/designer.png';
+
+const productGuideUrl =
+	'https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-workflows-in-microsoft-365-copilot';
+---
+
+<BaseLayout
+	title="Workflows Agent Project Showcase"
+	description="A showcase of Workflows Agent in Microsoft 365 Copilot and Phil Daniels' engineering contributions."
+	sideBarActiveItemID="projects"
+>
+	<header class="reveal mb-14">
+		<a
+			class="mb-5 inline-flex text-sm font-semibold text-primary hover:underline"
+			href="/projects/"
+		>
+			← Back to projects
+		</a>
+		<div class="grid items-end gap-8 lg:grid-cols-[minmax(0,1fr)_auto]">
+			<div class="max-w-4xl">
+				<div class="flex flex-wrap items-center gap-2">
+					<p class="eyebrow">Microsoft product</p>
+					<span class="badge badge-secondary badge-sm">Public preview</span>
+				</div>
+				<h1 class="mt-5 text-5xl font-extrabold tracking-[-0.055em] sm:text-7xl">
+					Workflows Agent
+				</h1>
+				<p class="mt-6 max-w-3xl text-xl leading-9 text-base-content/72">
+					An agent in Microsoft 365 Copilot that transforms natural-language intent into working,
+					manageable automations across the Microsoft 365 ecosystem.
+				</p>
+			</div>
+			<div class="flex flex-wrap gap-2 lg:justify-end">
+				<a class="btn btn-ghost" href={productGuideUrl} target="_blank" rel="noreferrer">
+					Product guide ↗
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<section class="reveal reveal-delay-1 mb-16" aria-labelledby="workflows-overview">
+		<div class="surface-card overflow-hidden">
+			<div class="grid lg:grid-cols-[0.72fr_1.28fr]">
+				<div class="flex flex-col justify-center p-7 sm:p-10">
+					<p class="eyebrow">Natural language to automation</p>
+					<h2 id="workflows-overview" class="section-heading mt-4">
+						Describe the outcome. Let the agent build the workflow.
+					</h2>
+					<p class="section-copy mt-5">
+						Instead of manually configuring steps and connectors, people describe what they want to
+						accomplish. Workflows generates an automation using supported Microsoft 365 services,
+						then lets them test, monitor, and manage it visually.
+					</p>
+				</div>
+				<div class="relative min-h-80 overflow-hidden bg-[#191a22] p-4 sm:p-7">
+					<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,color-mix(in_oklab,var(--color-primary)_18%,transparent),transparent_58%)]"></div>
+					<Image
+						src={workflowsHome}
+						alt="Workflows Agent home showing a natural-language workflow request and templates"
+						class="relative mx-auto rounded-xl border border-white/10 shadow-2xl"
+						width={1862}
+						quality={88}
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="reveal reveal-delay-2 mb-16" aria-labelledby="workflows-capabilities">
+		<p class="eyebrow">Product capabilities</p>
+		<h2 id="workflows-capabilities" class="section-heading mb-8 mt-3">
+			Automation grounded in everyday Microsoft 365 work
+		</h2>
+		<div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+			<article class="surface-card p-6">
+				<p class="text-sm font-bold uppercase tracking-[0.12em] text-primary">Compose</p>
+				<h3 class="mt-3 text-xl font-bold">Build through conversation</h3>
+				<p class="mt-3 leading-7 text-base-content/65">
+					Describe the workflow in natural language instead of manually assembling every step.
+				</p>
+			</article>
+			<article class="surface-card p-6">
+				<p class="text-sm font-bold uppercase tracking-[0.12em] text-secondary">Connect</p>
+				<h3 class="mt-3 text-xl font-bold">Work across Microsoft 365</h3>
+				<p class="mt-3 leading-7 text-base-content/65">
+					Automate Outlook, Teams, SharePoint, Planner, Approvals, Copilot prompts, and user data.
+				</p>
+			</article>
+			<article class="surface-card p-6">
+				<p class="text-sm font-bold uppercase tracking-[0.12em] text-primary">Trigger</p>
+				<h3 class="mt-3 text-xl font-bold">Respond or run on schedule</h3>
+				<p class="mt-3 leading-7 text-base-content/65">
+					Start workflows on a recurrence or in response to events in connected services.
+				</p>
+			</article>
+			<article class="surface-card p-6">
+				<p class="text-sm font-bold uppercase tracking-[0.12em] text-secondary">Operate</p>
+				<h3 class="mt-3 text-xl font-bold">Test, monitor, and manage</h3>
+				<p class="mt-3 leading-7 text-base-content/65">
+					Inspect workflow structure, test execution, review activity, and manage automations.
+				</p>
+			</article>
+		</div>
+	</section>
+
+	<section class="mb-16" aria-labelledby="workflows-designer">
+		<div class="grid items-start gap-8 lg:grid-cols-[0.72fr_1.28fr]">
+			<div class="lg:sticky lg:top-10">
+				<p class="eyebrow">Agentic creation</p>
+				<h2 id="workflows-designer" class="section-heading mt-3">
+					Conversation and visual structure in one experience
+				</h2>
+				<p class="section-copy mt-5">
+					The agent reasons through a request in chat while presenting the generated trigger and
+					actions as a visual workflow. Users can refine timing, inspect service connections, save
+					the result, and test it before relying on the automation.
+				</p>
+			</div>
+			<div class="rounded-2xl border border-base-content/10 bg-[#191a22] p-3 shadow-2xl sm:p-5">
+				<Image
+					src={workflowDesigner}
+					alt="Workflows Agent chat beside a generated Microsoft 365 workflow"
+					class="w-full rounded-xl"
+					width={1875}
+					quality={90}
+				/>
+			</div>
+		</div>
+	</section>
+
+	<section class="surface-card overflow-hidden" aria-labelledby="workflows-contribution">
+		<div class="grid lg:grid-cols-[0.78fr_1.22fr]">
+			<div class="bg-primary/8 p-7 sm:p-10">
+				<p class="eyebrow">My contribution</p>
+				<h2 id="workflows-contribution" class="section-heading mt-3">
+					From preview to a production-ready product
+				</h2>
+			</div>
+			<div class="grid gap-7 p-7 sm:grid-cols-2 sm:p-10">
+				<div class="sm:col-span-2">
+					<p class="text-4xl font-extrabold tracking-tight text-secondary">Preview → GA</p>
+					<h3 class="mt-3 text-lg font-bold">Cross-functional product leadership</h3>
+					<p class="mt-2 leading-7 text-base-content/65">
+						Led a cross-functional team taking Workflows Agent from preview to general availability,
+						delivering improvements that increased user sentiment scores and homepage performance
+						while maintaining high availability. Collaborated with Product and Design throughout the
+						initiative.
+					</p>
+				</div>
+				<div>
+					<p class="text-4xl font-extrabold tracking-tight text-primary">15%</p>
+					<h3 class="mt-3 text-lg font-bold">Agent-quality improvement</h3>
+					<p class="mt-2 leading-7 text-base-content/65">
+						Improved output quality through prompt engineering and systematic agent evaluations.
+					</p>
+				</div>
+				<div>
+					<p class="text-4xl font-extrabold tracking-tight text-secondary">On demand</p>
+					<h3 class="mt-3 text-lg font-bold">Independent frontend delivery</h3>
+					<p class="mt-2 leading-7 text-base-content/65">
+						Architected Module Federation patterns to decouple frontend deployments, reducing
+						release cycles from bi-weekly to on-demand and enabling independent scaling for
+						sub-teams.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</BaseLayout>

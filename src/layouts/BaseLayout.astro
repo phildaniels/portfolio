@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SideBar from '../components/SideBar.astro';
 
-import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API } from '../config';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import ThemeIcon from '@components/ThemeIcon.astro';
 
 const {
@@ -17,20 +17,29 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" data-theme="cupcake">
+<html lang="en" data-theme="dark">
 	<head>
-		<BaseHead title={title} description={description} , ogType={ogType} />
+		<BaseHead title={title} description={description} ogType={ogType} />
 	</head>
 	<body>
-		<div class="absolute right-4 top-4 z-50">
-			<ThemeIcon />
-		</div>
-		<div class="drawer bg-base-100 lg:drawer-open">
+		<a
+			href="#main-content"
+			class="btn btn-primary btn-sm fixed left-4 top-3 z-[100] -translate-y-20 focus:translate-y-0"
+		>
+			Skip to content
+		</a>
+		<div class="drawer min-h-screen lg:drawer-open">
 			<input id="my-drawer" type="checkbox" class="drawer-toggle" />
-			<div class="drawer-content bg-base-100">
-				<Header title={SITE_TITLE} />
-				<div class="md:flex md:justify-center">
-					<main class="max-w-[100vw] p-6 pt-10 lg:max-w-[900px]">
+			<div class="drawer-content flex min-h-screen min-w-0 flex-col">
+				<Header />
+				<div class="site-chrome fixed right-4 top-3 z-50 hidden lg:block">
+					<ThemeIcon />
+				</div>
+				<div class="flex grow justify-center">
+					<main
+						id="main-content"
+						class="w-full max-w-[var(--page-max)] px-5 py-10 sm:px-8 sm:py-14 lg:px-12 lg:py-16"
+					>
 						<slot />
 					</main>
 				</div>

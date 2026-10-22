@@ -16,58 +16,98 @@ const mailTo = 'mailto:' + 'phil' + '@' + 'danielsdev' + '.cloud';
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-	<div class="mt-5 pb-12">
-  <div class="py-1 text-xl">Hey there 👋</div>
-  <div class="text-5xl font-bold">I'm Phil Daniels</div>
-  <div class="py-3 text-3xl font-bold">
-    Full Stack, <i>Cloud First</i>, Software Engineer
-  </div>
-  <div class="py-2">
-    <text class="text-justify text-lg">
-      Located in <i>Windsor Colorado</i> currently employed at <i>Microsoft</i
-      >, I use my passion for technology to create solutions that solve real
-      world problems. I specialize in <b
-        >Frontend / Fullstack Software Engineering</b
-      >, with a focus on <i>Cloud First SaaS</i> solutions. I have experience with
-      a wide range of technologies and am always looking to learn more. My expertise
-      is in Cloud Technologies (<b>Azure, AWS, Firebase</b>), <b>AI</b> and <b
-        >LLM</b
-      >
-      <i>products</i>, <b>Serverless Workflows</b>, and <b
-        >Microservice Architecture</b
-      >. Some tools and tech I consider myself an expert in include <b>React</b
-      >, <b>Node</b>, <b>.NET</b>, and <b>Serverless Functions</b> (AWS Lambda,
-      Cloudflare Workers, Azure Functions, etc.)
-    </text>
-  </div>
-  <div class="mt-8">
-    <a class="btn" href={mailTo} target="_blank"> Let's connect!</a>
-  </div>
-</div>
+	<section class="reveal relative mb-20 overflow-hidden">
+		<div class="mb-6 flex items-center gap-3">
+			<span class="h-2.5 w-2.5 animate-pulse rounded-full bg-secondary"></span>
+			<span class="text-sm font-medium text-base-content/60">
+				Building thoughtful software remotely in Colorado
+			</span>
+		</div>
+		<p class="eyebrow">Hello, I'm Phil</p>
+		<h1 class="mt-5 max-w-4xl text-5xl font-extrabold leading-[1.04] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
+			Software Engineer shipping{' '}
+			<span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+				delightful products to millions of people.
+			</span>
+		</h1>
+		<p class="mt-8 max-w-3xl text-lg leading-8 text-base-content/68 sm:text-xl sm:leading-9">
+			I'm a software engineer at <strong class="font-semibold text-base-content">Microsoft</strong>{' '}
+			in Windsor, Colorado. I turn complex product and platform challenges into reliable,
+			approachable experiences across frontend, backend, cloud, and AI systems.
+		</p>
+		<div class="mt-8 flex flex-wrap gap-3">
+			<a class="btn btn-primary px-6" href={mailTo}>
+				Let's connect <span aria-hidden="true">↗</span>
+			</a>
+			<a class="btn btn-ghost border border-base-content/12 px-6" href="/projects">
+				Explore my work
+			</a>
+		</div>
+		<div class="mt-12 grid max-w-3xl gap-3 sm:grid-cols-3">
+			<div class="rounded-xl border border-base-content/10 bg-base-200/50 p-4">
+				<p class="text-2xl font-bold tracking-tight">9+ Years</p>
+				<p class="mt-1 text-sm text-base-content/55">Shipping software at scale</p>
+			</div>
+			<div class="rounded-xl border border-base-content/10 bg-base-200/50 p-4">
+				<p class="text-2xl font-bold tracking-tight">Cloud + AI</p>
+				<p class="mt-1 text-sm text-base-content/55">
+					Intelligent, cutting-edge products utilizing frontier models
+				</p>
+			</div>
+			<div class="rounded-xl border border-base-content/10 bg-base-200/50 p-4">
+				<p class="text-2xl font-bold tracking-tight">Software engineering</p>
+				<p class="mt-1 text-sm text-base-content/55">
+					On the cutting edge, moving at Mach 5 with agents every day
+				</p>
+			</div>
+		</div>
+	</section>
 
-	<div>
-		<div class="mb-2 w-full text-3xl font-bold">Some personal projects I'm working on {'</>'}</div>
-	</div>
+	<section class="reveal reveal-delay-1 mb-20" aria-labelledby="projects-heading">
+		<div class="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+			<div>
+				<p class="eyebrow">Selected work</p>
+				<h2 id="projects-heading" class="section-heading mt-3">
+					Projects built with curiosity
+				</h2>
+				<p class="section-copy mt-3">
+					Open-source tools, experiments, and products I work on outside of work.
+				</p>
+			</div>
+			<a
+				class="link link-primary shrink-0 font-semibold no-underline hover:underline"
+				href="/projects"
+			>
+				View all projects →
+			</a>
+		</div>
+		<ProjectsList />
+	</section>
 
-	<ProjectsList />
+	<section class="reveal reveal-delay-2" aria-labelledby="writing-heading">
+		<div class="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+			<div>
+				<p class="eyebrow">Writing</p>
+				<h2 id="writing-heading" class="section-heading mt-3">
+					Latest from the blog
+				</h2>
+			</div>
+			<a class="link link-primary shrink-0 font-semibold no-underline hover:underline" href="/blog">
+				Browse all posts →
+			</a>
+		</div>
 
-	<div>
-		<div class="mb-5 mt-10 w-full text-3xl font-bold">Latest from blog</div>
-	</div>
-
-	{
-		last_posts.map((post) => (
-			<>
+		<div class="grid gap-5">
+			{last_posts.map((post) => (
 				<HorizontalCard
 					title={post.data.title}
 					img={post.data.heroImage}
 					desc={post.data.description}
-					url={'/blog/' + createSlug(post.data.title, post.slug)}
+					url={'/blog/' + createSlug(post.data.title, post.id)}
 					target="_self"
 					badge={post.data.badge}
 				/>
-				<div class="divider my-0" />
-			</>
-		))
-	}
+			))}
+		</div>
+	</section>
 </BaseLayout>

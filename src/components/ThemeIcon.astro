@@ -1,9 +1,20 @@
 ---
-
 ---
 
-<button id="themeToggle" aria-label="Dark Mode Toggle" transition:persist>
-	<svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<button
+	class="theme-toggle btn btn-circle btn-ghost border border-base-content/10 bg-base-100/80 shadow-sm"
+	aria-label="Toggle color theme"
+	title="Toggle color theme"
+	onclick="window.toggleTheme?.()"
+	transition:persist
+>
+	<svg
+		width="20"
+		height="20"
+		aria-hidden="true"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 24 24"
+	>
 		<path
 			class="sun"
 			fill-rule="evenodd"
@@ -18,34 +29,18 @@
 </button>
 
 <style>
-	#themeToggle {
-		border: 0;
-		background: none;
-	}
 	.sun {
-		fill: black;
+		fill: currentColor;
 	}
 	.moon {
 		fill: transparent;
 	}
 
-	:root[data-theme='dracula'] .sun {
+	:root[data-theme='dark'] .sun {
 		fill: transparent;
 	}
 
-	:root[data-theme='dracula'] .moon {
-		fill: white;
+	:root[data-theme='dark'] .moon {
+		fill: currentColor;
 	}
 </style>
-
-<script is:inline>
-	const handleToggleClick = () => {
-		const html = document.documentElement;
-		const currentTheme = html.getAttribute('data-theme');
-		const newTheme = currentTheme === 'cupcake' ? 'dracula' : 'cupcake';
-		html.setAttribute('data-theme', newTheme);
-		localStorage.setItem('theme', newTheme);
-	};
-
-	document.getElementById('themeToggle').addEventListener('click', handleToggleClick);
-</script>

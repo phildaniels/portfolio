@@ -5,23 +5,27 @@ import SideBarMenu from './SideBarMenu.astro';
 const { sideBarActiveItemID } = Astro.props;
 ---
 
-<div class="drawer-side z-40">
-	<label for="my-drawer" class="drawer-overlay"></label>
-	<aside class="flex h-auto min-h-full w-[19rem] flex-col bg-base-200 px-2 pt-2 text-base-content">
-		<div class="mx-auto mb-6 mt-5 w-fit">
-			<a href="/">
-				<div class="avatar m-auto block transition ease-in-out hover:scale-[102%]">
-					<div class="w-[8.5rem]">
+<div class="drawer-side site-chrome z-40">
+	<label for="my-drawer" class="drawer-overlay" aria-label="Close navigation"></label>
+	<aside class="flex min-h-full w-[var(--sidebar-width)] flex-col border-r border-base-content/10 bg-base-200/95 px-5 pb-5 pt-8 text-base-content backdrop-blur-xl">
+		<div class="mb-8">
+			<a href="/" class="group block">
+				<div class="avatar mb-4 block">
+					<div class="w-20 overflow-hidden rounded-2xl ring-1 ring-base-content/15 ring-offset-4 ring-offset-base-200 transition-transform group-hover:-rotate-2">
 						<Image
-							class="mask mask-circle"
+							class="aspect-square object-cover"
 							format="webp"
 							width={300}
 							height={300}
 							src="/profile.webp"
-							alt="Profile image"
+							alt="Phil Daniels"
 						/>
 					</div>
 				</div>
+				<p class="text-xl font-bold tracking-tight">Phil Daniels</p>
+				<p class="mt-1 text-sm leading-relaxed text-base-content/60">
+					Software Engineer shipping delightful products to millions of people.
+				</p>
 			</a>
 		</div>
 		<SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />

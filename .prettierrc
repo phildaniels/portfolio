@@ -1,5 +1,5 @@
 {
-	"tailwindConfig": "./tailwind.config.cjs",
+	"tailwindStylesheet": "./src/styles/global.css",
 	"useTabs": true,
 	"singleQuote": true,
 	"trailingComma": "none",
@@ -13,6 +13,5 @@
 				"parser": "astro"
 			}
 		}
-	],
-	"pluginSearchDirs": false
+	]
 }

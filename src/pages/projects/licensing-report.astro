@@ -1,0 +1,180 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import overview from '../../assets/licensing-report/overview.png';
+import userDetails from '../../assets/licensing-report/user-details.png';
+
+const productUrl =
+	'https://learn.microsoft.com/en-us/power-platform/admin/view-license-consumption-power-automate';
+---
+
+<BaseLayout
+	title="Power Platform Licensing & Usage Showcase"
+	description="An end-to-end case study of the Power Platform licensing and consumption reporting experience."
+	sideBarActiveItemID="projects"
+>
+	<header class="reveal mb-14">
+		<a
+			class="mb-5 inline-flex text-sm font-semibold text-primary hover:underline"
+			href="/projects/"
+		>
+			← Back to projects
+		</a>
+		<div class="grid items-end gap-8 lg:grid-cols-[minmax(0,1fr)_auto]">
+			<div class="max-w-4xl">
+				<div class="flex flex-wrap items-center gap-2">
+					<p class="eyebrow">Microsoft product</p>
+					<span class="badge badge-secondary badge-sm">Power Platform</span>
+				</div>
+				<h1 class="mt-5 text-5xl font-extrabold tracking-[-0.055em] sm:text-7xl">
+					Licensing & Usage
+				</h1>
+				<p class="mt-6 max-w-3xl text-xl leading-9 text-base-content/72">
+					A tenant-scale reporting experience that transforms high-volume telemetry into clear,
+					actionable licensing insights for Power Platform administrators.
+				</p>
+			</div>
+			<a class="btn btn-ghost" href={productUrl} target="_blank" rel="noreferrer">
+				Product documentation ↗
+			</a>
+		</div>
+	</header>
+
+	<section class="reveal reveal-delay-1 mb-16" aria-labelledby="licensing-overview">
+		<div class="surface-card overflow-hidden">
+			<div class="grid lg:grid-cols-[0.7fr_1.3fr]">
+				<div class="flex flex-col justify-center p-7 sm:p-10">
+					<p class="eyebrow">The product</p>
+					<h2 id="licensing-overview" class="section-heading mt-4">
+						Turn license consumption into decisions
+					</h2>
+					<p class="section-copy mt-5">
+						The report helps administrators see who is consuming each license, find users and flows
+						exceeding daily capacity, understand usage trends, and move directly from a tenant-wide
+						summary into detailed action.
+					</p>
+				</div>
+				<div class="relative overflow-hidden bg-[#f5f5f5] p-4 sm:p-7">
+					<Image
+						src={overview}
+						alt="Power Platform admin center licensing overview"
+						class="relative mx-auto rounded-xl border border-black/10 shadow-2xl"
+						width={1291}
+						quality={90}
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="reveal reveal-delay-2 mb-16" aria-labelledby="licensing-architecture">
+		<p class="eyebrow">Architecture</p>
+		<h2 id="licensing-architecture" class="section-heading mb-8 mt-3">
+			From raw telemetry to an administrator-ready report
+		</h2>
+		<div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+			<article class="surface-card p-6">
+				<p class="text-sm font-bold uppercase tracking-[0.12em] text-secondary">01 · Ingest</p>
+				<h3 class="mt-3 text-xl font-bold">Apache Spark pipelines</h3>
+				<p class="mt-3 leading-7 text-base-content/65">
+					Contributed to Spark-based pipelines that ingest raw product telemetry and prepare it for
+					analytics processing.
+				</p>
+			</article>
+			<article class="surface-card p-6">
+				<p class="text-sm font-bold uppercase tracking-[0.12em] text-primary">02 · Transform</p>
+				<h3 class="mt-3 text-xl font-bold">Synapse data modeling</h3>
+				<p class="mt-3 leading-7 text-base-content/65">
+					Flattened and transformed large datasets into reporting-friendly structures inside Azure
+					Synapse.
+				</p>
+			</article>
+			<article class="surface-card p-6">
+				<p class="text-sm font-bold uppercase tracking-[0.12em] text-secondary">03 · Aggregate</p>
+				<h3 class="mt-3 text-xl font-bold">Big Data SQL</h3>
+				<p class="mt-3 leading-7 text-base-content/65">
+					Wrote large-scale SQL queries and designed pre-aggregations that made tenant and
+					user-level analysis responsive.
+				</p>
+			</article>
+			<article class="surface-card p-6">
+				<p class="text-sm font-bold uppercase tracking-[0.12em] text-primary">04 · Serve</p>
+				<h3 class="mt-3 text-xl font-bold">API contracts</h3>
+				<p class="mt-3 leading-7 text-base-content/65">
+					Designed and implemented the API layer and contracts that translate analytical data into
+					stable frontend capabilities.
+				</p>
+			</article>
+		</div>
+	</section>
+
+	<section class="mb-16" aria-labelledby="licensing-details">
+		<div class="grid items-start gap-8 lg:grid-cols-[0.72fr_1.28fr]">
+			<div class="lg:sticky lg:top-10">
+				<p class="eyebrow">Progressive detail</p>
+				<h2 id="licensing-details" class="section-heading mt-3">
+					Move from capacity signals to the exact flows driving usage
+				</h2>
+				<p class="section-copy mt-5">
+					Administrators can drill into a user, compare consumption across license contexts,
+					identify the environments and flows creating demand, and export the underlying report for
+					further analysis.
+				</p>
+			</div>
+			<div class="rounded-2xl border border-base-content/10 bg-[#f5f5f5] p-3 shadow-2xl sm:p-5">
+				<Image
+					src={userDetails}
+					alt="Power Platform licensing report with user-level usage trends and flow details"
+					class="w-full rounded-xl"
+					width={1292}
+					quality={90}
+				/>
+			</div>
+		</div>
+	</section>
+
+	<section class="surface-card overflow-hidden" aria-labelledby="licensing-contribution">
+		<div class="grid lg:grid-cols-[0.72fr_1.28fr]">
+			<div class="bg-primary/8 p-7 sm:p-10">
+				<p class="eyebrow">My contribution</p>
+				<h2 id="licensing-contribution" class="section-heading mt-3">
+					Technical leadership across the complete product stack
+				</h2>
+			</div>
+			<div class="grid gap-7 p-7 sm:grid-cols-2 sm:p-10">
+				<div>
+					<p class="text-4xl font-extrabold tracking-tight text-secondary">~$10M</p>
+					<h3 class="mt-3 text-lg font-bold">Revenue opportunity</h3>
+					<p class="mt-2 leading-7 text-base-content/65">
+						Delivered foundational licensing-enforcement and consumption-reporting work that created
+						an opportunity for approximately $10 million in additional product revenue.
+					</p>
+				</div>
+				<div>
+					<p class="text-4xl font-extrabold tracking-tight text-primary">Frontend</p>
+					<h3 class="mt-3 text-lg font-bold">Architecture and team leadership</h3>
+					<p class="mt-2 leading-7 text-base-content/65">
+						Designed the frontend architecture, partnered with Product and Design, and led a team of
+						early-in-career engineers through implementation.
+					</p>
+				</div>
+				<div>
+					<p class="text-4xl font-extrabold tracking-tight text-primary">API</p>
+					<h3 class="mt-3 text-lg font-bold">Service and contract design</h3>
+					<p class="mt-2 leading-7 text-base-content/65">
+						Designed and implemented the API layer and durable contracts connecting the reporting
+						experience to its analytical data.
+					</p>
+				</div>
+				<div>
+					<p class="text-4xl font-extrabold tracking-tight text-secondary">Data</p>
+					<h3 class="mt-3 text-lg font-bold">Large-scale analytics engineering</h3>
+					<p class="mt-2 leading-7 text-base-content/65">
+						Built Synapse SQL aggregation and pre-aggregation strategies, transformed flattened
+						datasets, and contributed to Spark ingestion from raw telemetry.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</BaseLayout>

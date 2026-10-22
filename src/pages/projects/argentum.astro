@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const repositoryUrl = 'https://github.com/phildaniels/argentum';
+const terminalUrl = '/argentum-terminal/index.html';
+---
+
+<BaseLayout
+	title="Try Argentum"
+	description="Run Argentum's interactive browser-terminal market dashboard."
+	sideBarActiveItemID="projects"
+>
+	<header class="reveal mb-8">
+		<a
+			class="mb-5 inline-flex text-sm font-semibold text-primary hover:underline"
+			href="/projects/"
+		>
+			← Back to projects
+		</a>
+		<div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+			<div class="max-w-3xl">
+				<p class="eyebrow">Interactive demo</p>
+				<h1 class="mt-4 text-4xl font-extrabold tracking-[-0.05em] sm:text-6xl">Argentum</h1>
+				<p class="section-copy mt-5 text-lg">
+					A glanceable market dashboard built for the terminal. Press Enter below to launch the real
+					static browser build, then use the displayed keyboard and mouse controls.
+				</p>
+			</div>
+			<div class="flex shrink-0 flex-wrap gap-2">
+				<a class="btn btn-primary btn-sm" href={terminalUrl} target="_blank">
+					Open full screen ↗
+				</a>
+				<a class="btn btn-ghost btn-sm" href={repositoryUrl} target="_blank" rel="noreferrer">
+					View source ↗
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<section class="reveal reveal-delay-1" aria-labelledby="browser-terminal-heading">
+		<h2 id="browser-terminal-heading" class="sr-only">
+			Argentum browser terminal
+		</h2>
+		<div class="terminal-embed surface-card overflow-hidden">
+			<iframe
+				src={terminalUrl}
+				title="Interactive Argentum browser terminal"
+				loading="eager"
+				allow="clipboard-write"
+			></iframe>
+		</div>
+		<p class="mt-4 text-sm leading-relaxed text-base-content/60">
+			This self-contained build runs the dashboard in an event-driven Web Worker and renders it
+			through xterm.js. Browser market data comes from TradingView’s keyless, CORS-enabled scanner;
+			unauthenticated US equity prices may be delayed.
+		</p>
+	</section>
+</BaseLayout>
+
+<style>
+	.terminal-embed {
+		background: #21222c;
+		height: clamp(38rem, 74vh, 54rem);
+	}
+
+	.terminal-embed iframe {
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+
+	@media (max-width: 640px) {
+		.terminal-embed {
+			height: 42rem;
+			border-radius: 0.8rem;
+		}
+	}
+</style>

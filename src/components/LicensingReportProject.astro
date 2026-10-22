@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+import overview from '../assets/licensing-report/overview.png';
+
+const projectUrl = '/projects/licensing-report/';
+const productUrl =
+	'https://learn.microsoft.com/en-us/power-platform/admin/view-license-consumption-power-automate';
+---
+
+<article class="surface-card interactive-card relative overflow-hidden">
+	<a
+		href={projectUrl}
+		class="absolute inset-0 z-10 rounded-[inherit]"
+		aria-label="View the Power Platform Licensing and Usage project showcase"
+	></a>
+
+	<div class="pointer-events-none flex flex-col items-stretch lg:flex-row">
+		<div class="relative min-h-72 w-full overflow-hidden border-b border-base-content/10 bg-[#f5f5f5] lg:min-h-96 lg:w-[45%] lg:shrink-0 lg:border-b-0 lg:border-r">
+			<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,color-mix(in_oklab,var(--color-secondary)_18%,transparent),transparent_60%)]"></div>
+			<Image
+				src={overview}
+				alt="Power Platform Licensing and Usage report showing license capacity and users exceeding limits"
+				class="absolute left-[4%] top-9 w-[145%] max-w-none rounded-t-xl border border-black/10 shadow-2xl"
+				width={1291}
+				quality={84}
+			/>
+		</div>
+
+		<div class="flex grow flex-col justify-center p-6 sm:p-8">
+			<div class="mb-3 flex flex-wrap items-center gap-2">
+				<h3 class="text-2xl font-bold tracking-tight">Power Platform Licensing & Usage</h3>
+				<span class="badge badge-secondary badge-sm font-semibold">Microsoft product</span>
+			</div>
+			<p class="leading-relaxed text-base-content/75">
+				A tenant-scale reporting experience that helps administrators understand license
+				consumption, identify overages, and take action across Power Platform products.
+			</p>
+			<p class="mt-3 text-sm leading-relaxed text-base-content/55">
+				I led the frontend implementation and designed the data path from raw telemetry through
+				Spark, Synapse, APIs, and the final administrator experience.
+			</p>
+			<div class="pointer-events-auto relative z-20 mt-5 flex flex-wrap gap-2">
+				<a class="btn btn-primary btn-sm" href={projectUrl}>
+					View showcase
+				</a>
+				<a class="btn btn-ghost btn-sm" href={productUrl} target="_blank" rel="noreferrer">
+					Product documentation ↗
+				</a>
+			</div>
+			<div class="mt-5 flex flex-wrap gap-2">
+				<span class="badge badge-outline badge-sm">React</span>
+				<span class="badge badge-outline badge-sm">.NET</span>
+				<span class="badge badge-outline badge-sm">Azure Synapse</span>
+				<span class="badge badge-outline badge-sm">Apache Spark</span>
+			</div>
+		</div>
+	</div>
+</article>

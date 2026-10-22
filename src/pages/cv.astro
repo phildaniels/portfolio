@@ -1,186 +1,295 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TimeLineElement from '../components/cv/TimeLine.astro';
+
 const email = 'phil' + '@' + 'daniels' + 'dev' + '.' + 'cloud';
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-<div class="btn mb-5 mt-8">
-<a href="/Phil-Daniels_Resume_2026.pdf" download="Phil-Daniels_Resume_2026.pdf" target="_blank">
-Click Here to Download
-</a>
-</div>
+	<header class="reveal surface-card mb-14 overflow-hidden p-6 sm:p-9">
+		<div class="flex flex-col justify-between gap-7 md:flex-row md:items-start">
+			<div>
+				<p class="eyebrow">Resume</p>
+				<h1 class="mt-4 text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl">Phil Daniels</h1>
+				<p class="mt-2 text-lg font-medium text-base-content/60">Senior Software Engineer</p>
+			</div>
+			<a
+				class="resume-download btn btn-primary"
+				href="/phil-daniels-resume.pdf"
+				download="phil-daniels-resume.pdf"
+			>
+				Download PDF <span aria-hidden="true">↓</span>
+			</a>
+		</div>
+		<div class="mt-7 flex flex-wrap gap-x-4 gap-y-2 border-t border-base-content/10 pt-6 text-sm text-base-content/65">
+			<a class="hover:text-primary" href={`mailto:${email}`}>
+				{email}
+			</a>
+			<span aria-hidden="true">·</span>
+			<a class="hover:text-primary" href="tel:+13035329389">
+				(303) 532-9389
+			</a>
+			<span aria-hidden="true">·</span>
+			<a class="underline" href="https://linkedin.com/in/phillip-daniels" target="_blank">
+				LinkedIn
+			</a>
+			<span aria-hidden="true">·</span>
+			<a class="underline" href="https://danielsdev.cloud" target="_blank">
+				danielsdev.cloud
+			</a>
+		</div>
+	</header>
 
-<div class="mb-5">
-<div class="w-full text-center text-3xl font-bold">Phil Daniels</div>
-<div class="w-full text-center text-lg">
-{email} | (303) 532 9389 | Windsor, Colorado
-</div>
-<div class="w-full text-center text-lg">
-<a class="underline" href="https://github.com/phildaniels" target="_blank">https://github.com/phildaniels</a> |
-<a class="underline" href="https://www.linkedin.com/in/phillip-daniels" target="_blank">https://www.linkedin.com/in/phillip-daniels</a> |
-<a class="underline" href="https://danielsdev.cloud" target="_blank">https://danielsdev.cloud</a>
-</div>
-</div>
+	<p class="reveal reveal-delay-1 mb-14 max-w-4xl text-xl leading-9 text-base-content/72">
+		Tenured Software Engineer with 9 years of experience leading architecture and delivery across
+		frontend, backend, and data systems, most recently on Power Platform and AI agents in M365
+		Copilot at tens of billions of runs per month. Track record of org-wide technical leadership,
+		mentoring engineers, and shipping work tied to measurable revenue, reliability, and developer
+		productivity.
+	</p>
 
-<div class="mb-10 w-full text-center text-lg">
-<i>Frontend and Full Stack Software Engineer specializing in shipping AI driven experiences to millions of users</i>
-</div>
+	<section aria-labelledby="experience-heading">
+		<p class="eyebrow">Career</p>
+		<h2 id="experience-heading" class="section-heading mb-9 mt-3">
+			Professional experience
+		</h2>
 
-<div class="mb-5">
-<div class="w-full text-2xl font-bold">Professional Experience</div>
-</div>
+		<div class="time-line-container">
+			<TimeLineElement
+				title="Senior Software Engineer"
+				start="May 2024"
+				end="Present"
+				organization="Microsoft"
+				city="Windsor"
+				state="CO"
+			>
+				<ul class="mx-6 mb-10 grid list-disc gap-2">
+					<li class="text-lg">
+						Building <em>Workflows Agent</em> in <em>M365 Copilot</em> (
+						<a class="underline" href="https://aka.ms/workflowsagentgs" target="_blank">
+							https://aka.ms/workflowsagentgs
+						</a>
+						): improved agent quality <em>15%</em> through <em>prompt engineering</em> and{' '}
+						<em>agent evaluations</em>.
+					</li>
+					<li class="text-lg">
+						Led the Power Platform <em>AI credit and consumption report</em> end to end, groundwork
+						for license enforcement driving <em>$10M</em> in revenue: designed the{' '}
+						<em>Azure Synapse</em> schema, built the <em>.NET</em> service and{' '}
+						<em>Synapse Spark</em> pipelines, and led early-in-career engineers on the{' '}
+						<em>React</em> frontend.
+					</li>
+					<li class="text-lg">
+						Delivered <em>environment routing</em> for <em>Power Automate</em>, owning complex{' '}
+						<em>UI routing</em>, <em>caching</em>, and <em>API call pattern</em> optimization;
+						unblocked a Fortune 500 deal worth <em>$1.2M</em> in new licenses.
+					</li>
+					<li class="text-lg">
+						Part of the incubation team that drove <em>AI-first engineering</em> across the org:
+						built <em>Claude Code/GitHub Copilot skills</em> and agentic workflows (PR output up{' '}
+						<em>120%</em>), plus <em>Python</em> telemetry and <em>ADX</em>/<em>Grafana</em>{' '}
+						dashboards for autonomous PR agents.
+					</li>
+					<li class="text-lg">
+						Architected <em>Module Federation</em> patterns to decouple frontend deployments across
+						sub-teams, moving releases from bi-weekly to on-demand.
+					</li>
+					<li class="text-lg">
+						Re-architected the <em>distributed job infrastructure</em> behind environment copy,
+						update, delete, and migration into <em>batched jobs</em>, removing a ~250-resource
+						ceiling and cutting job failure rates <em>10%</em>.
+					</li>
+					<li class="text-lg">
+						<em>QDE</em> Champion for the Agent Flows org and member of the{' '}
+						<em>Frontend Expert Group</em>: owned the shared frontend repo, championed automated
+						testing, and led a vendor test team.
+					</li>
+					<li class="text-lg">
+						<em>On Call</em> / Livesite Champion: led reliability initiatives that cut incidents{' '}
+						<em>15%</em> and wake-up calls <em>30%</em>; cut Home Page API latency <em>10%</em>.
+					</li>
+				</ul>
+			</TimeLineElement>
 
-<div class="time-line-container mb-5">
-<TimeLineElement
-title="Senior Software Engineer"
-start="May 2024"
-end="Present"
-organization="Microsoft"
-city="Windsor"
-state="CO"
->
-<ul class="mx-6 mb-10 grid list-disc gap-2">
-<li class="text-lg">
-Currently on a <b><i>Frontend Engineering</i></b> team building <b><i>Workflows Agent</i></b>, an agent in <b><i>M365 Copilot</i></b>
-that can be used to automate work using natural language (<a
-class="underline"
-href="https://aka.ms/workflowsagentgs"
-target="_blank">https://aka.ms/workflowsagentgs</a
->) Tools and tech used every day include <b><i>React</i></b>, <i><b>.NET</b></i>, and <b><i>Azure</i></b>.
-</li>
-<li class="text-lg">
-Developed AI Driven features utilizing <i><b>Large Language Models</b></i> (LLMs), and Agents to enhance user productivity
-</li>
-<li class="text-lg">Implemented <b><i>Observability</i></b> and proactively monitoring features.</li>
-<li class="text-lg">Contributed to open source repositories utilized by product</li>
-<li class="text-lg">
-Resolved Livesite (On-call / SRE duties) production issues for customers. Livesite champion
-for team, analyzed and decreased wakeup calls for team by <i>50%</i> and decreased Incidents
-per day by <i>20%</i>
-</li>
-<li class="text-lg">
-Guided and mentored team in Frontend excellence; Member of Frontend Expert Group within
-organization with special ownership over frontend repo.
-</li>
-</ul>
-</TimeLineElement>
-<TimeLineElement
-title="Senior Software Engineer"
-start="June 2023"
-end="April 2024"
-organization="Ensemble Health Partners"
-city="Windsor"
-state="CO"
->
-<ul class="mx-6 mb-10 grid list-disc gap-2">
-<li class="text-lg">
-Fullstack Engineer, Leader, and Decision maker for the Platform Engineering team; tools and
-tech used every day include <b><i>Terraform</i></b>, <b><i>TypeScript</i></b>, <b
-><i>React</i></b
->, <i><b>.NET</b></i>, and <b><i>Go</i></b>, hosted in <b><i>AWS</i></b> and <b
-><i>Azure</i></b
->.
-</li>
-<li class="text-lg">
-Launched a custom React based Micro-frontend hosting solution for Ensemble applications.
-Reduced technical debt by collapsing multiple applications into a single platform,
-increasing user productivity and improving application change time to market. Leveraged <b
-><i>Terraform</i></b
->, <b><i>React</i></b>, <b><i>Go</i></b>, and <b><i>Cloud Storage</i></b>. Decreased
-frontend hosting costs for organization by <i>30%</i>.
-</li>
-<li class="text-lg">
-Designed and Developed a <b><i>GraphQL</i></b> based user and identity management platform,
-using <b><i>NextJS</i></b>, <b><i>Serverless Functions</i></b>, and <b><i>MongoDB</i></b>;
-integrated with Ensemble's Identity as a Service provider. Pattern implemented organization
-wide and leveraged by Hosting Solution. Accelerated launch of new applications.
-</li>
-</ul>
-</TimeLineElement>
-<TimeLineElement
-title="Senior Software Developer"
-start="Feb 2017"
-end="June 2023"
-organization="UL Solutions"
-city="Laramie"
-state="WY"
->
-<ul class="mx-6 mb-5 grid list-disc gap-2">
-<li class="text-lg">
-Technical Leader and Mentor for an ecosystem of applications containing 3 Agile teams.
-</li>
-<li class="text-lg">
-Led refactoring of existing On-Prem Monolith into <b><i>Micro-service Architecture</i></b
->, using <b><i>Docker</i></b> and <b><i>Kubernetes</i></b>. Collaborated with Partner teams
-(DevOps/SRE) to decrease operational, hosting, and development costs by <i>400k/year</i>
-</li>
-<li class="text-lg">
-Developed mobile application and PWA using <b><i>React Native</i></b> and <b
-><i>Firebase</i></b
->, increasing staff productivity <i>50%</i>
-</li>
-</ul>
-</TimeLineElement>
-</div>
+			<TimeLineElement
+				title="Senior Software Engineer"
+				start="June 2023"
+				end="April 2024"
+				organization="Ensemble Health Partners"
+				city="Windsor"
+				state="CO"
+			>
+				<ul class="mx-6 mb-10 grid list-disc gap-2">
+					<li class="text-lg">
+						Technical leader and decision maker for the Platform Engineering team; launched a
+						<em>React micro-frontend</em> platform (<em>Terraform</em>, <em>Go</em>, <em>S3</em>)
+						that consolidated multiple applications and cut hosting costs <em>30%</em>.
+					</li>
+					<li class="text-lg">
+						Designed a <em>GraphQL</em> identity management platform (<em>Next.js</em>,
+						<em>Lambda</em>, <em>MongoDB</em>) whose data model and integration patterns were
+						adopted org-wide.
+					</li>
+				</ul>
+			</TimeLineElement>
 
-<div class="mb-5">
-<div class="w-full text-2xl font-bold">Skills</div>
-</div>
+			<TimeLineElement
+				title="Senior Software Developer"
+				start="Feb 2017"
+				end="June 2023"
+				organization="UL Solutions"
+				city="Laramie"
+				state="WY"
+			>
+				<ul class="mx-6 mb-5 grid list-disc gap-2">
+					<li class="text-lg">
+						Technical leader and mentor across 3 Agile teams; led decomposition of an on-prem
+						<em>Java</em> monolith into <em>microservices</em> on <em>Kubernetes</em>, cutting costs{' '}
+						<em>$400k/year</em>.
+					</li>
+					<li class="text-lg">
+						Developed a <em>React Native</em> mobile app and <em>PWA</em>, increasing staff
+						productivity <em>50%</em>.
+					</li>
+				</ul>
+			</TimeLineElement>
+		</div>
+	</section>
 
-<div class="mx-6 mb-10">
-<div class="text-xl"><b><i>Languages</i></b></div>
-<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
-<li class="text-lg">JavaScript</li>
-<li class="text-lg">TypeScript</li>
-<li class="text-lg">C#</li>
-<li class="text-lg">SQL</li>
-<li class="text-lg">Rust</li>
-<li class="text-lg">Go</li>
-</ul>
-<div class="text-xl"><b><i>Frameworks</i></b></div>
-<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
-<li class="text-lg">React</li>
-<li class="text-lg">React Native</li>
-<li class="text-lg">NextJS</li>
-<li class="text-lg">Node</li>
-<li class="text-lg">.NET</li>
-</ul>
-<div class="text-xl"><b><i>Tools</i></b></div>
-<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
-<li class="text-lg">Azure</li>
-<li class="text-lg">AWS</li>
-<li class="text-lg">Firebase</li>
-<li class="text-lg">Docker</li>
-<li class="text-lg">Kubernetes</li>
-<li class="text-lg">Terraform</li>
-<li class="text-lg">Github Actions</li>
-</ul>
-<div class="text-xl"><b><i>Libraries</i></b></div>
-<ul class="mx-6 mb-5 list-disc columns-2 md:columns-5">
-<li class="text-lg">Mocha</li>
-<li class="text-lg">Jest</li>
-<li class="text-lg">Chai</li>
-<li class="text-lg">Tailwind</li>
-<li class="text-lg">Redux</li>
-<li class="text-lg">GraphQL</li>
-<li class="text-lg">Playwright</li>
-</ul>
-</div>
+	<section class="mt-8" aria-labelledby="skills-heading">
+		<p class="eyebrow">Toolbox</p>
+		<h2 id="skills-heading" class="section-heading mb-7 mt-3">
+			Skills
+		</h2>
+		<div class="grid gap-3 sm:grid-cols-2">
+			<div class="skill-card">
+				<strong>Languages</strong>
+				<span>TypeScript, JavaScript, C#, Python, Go, Java, SQL</span>
+			</div>
+			<div class="skill-card">
+				<strong>Frameworks</strong>
+				<span>React, Next.JS, Node, .NET, React Native</span>
+			</div>
+			<div>
+				<strong>Data and Distributed Systems:</strong> Azure Synapse, Spark, Databricks, Redis,
+				MongoDB, Microservices
+			</div>
+			<div>
+				<strong>Cloud and Infrastructure:</strong> Azure, AWS, Terraform, Docker, Kubernetes, GitHub
+				Actions
+			</div>
+			<div>
+				<strong>AI and Agents:</strong> Claude Code, GitHub Copilot, Prompt Engineering, LLM
+				Evaluation
+			</div>
+			<div>
+				<strong>APIs and Integration:</strong> REST, GraphQL, gRPC, WebSockets
+			</div>
+		</div>
+	</section>
 
-<div class="mb-5">
-<div class="w-full text-2xl font-bold">Education</div>
-</div>
-
-<div class="time-line-container mb-10 grid gap-4">
-<TimeLineElement
-title="B.S., Computer Science"
-start="Aug 2012"
-end="Dec 2016"
-organization="University of Wyoming"
-city="Laramie"
-state="WY"
-excludeVerticalBar={true}
-/>
-</div>
+	<section class="mt-14" aria-labelledby="education-heading">
+		<p class="eyebrow">Foundation</p>
+		<h2 id="education-heading" class="section-heading mb-6 mt-3">
+			Education
+		</h2>
+		<div class="surface-card p-6">
+			<strong class="text-lg">B.S., Computer Science</strong>
+			<p class="mt-1 text-base-content/60">
+				University of Wyoming · Aug 2012 – Dec 2016 · Laramie, WY
+			</p>
+		</div>
+	</section>
 </BaseLayout>
+
+<script>
+	const confettiColors = ['#ff79c6', '#ff92d0', '#e455a5', '#69ff94', '#8affaa', '#50fa7b'];
+
+	function launchResumeConfetti(link) {
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+		const rect = link.getBoundingClientRect();
+		const originX = rect.left + rect.width / 2;
+		const originY = rect.top + rect.height / 2;
+
+		for (let index = 0; index < 110; index += 1) {
+			const piece = document.createElement('span');
+			const size = 5 + Math.random() * 8;
+			const angle = Math.random() * Math.PI * 2;
+			const distance = 180 + Math.random() * 520;
+			const x = Math.cos(angle) * distance;
+			const y = Math.sin(angle) * distance + 220;
+
+			piece.className = 'resume-confetti';
+			piece.style.left = `${originX}px`;
+			piece.style.top = `${originY}px`;
+			piece.style.width = `${size}px`;
+			piece.style.height = `${size * (0.45 + Math.random() * 0.8)}px`;
+			piece.style.background = confettiColors[index % confettiColors.length];
+			piece.style.borderRadius = Math.random() > 0.65 ? '999px' : '2px';
+			document.body.append(piece);
+
+			piece
+				.animate(
+					[
+						{ opacity: 1, transform: 'translate(-50%, -50%) rotate(0deg) scale(1)' },
+						{
+							opacity: 1,
+							transform: `translate(calc(-50% + ${x * 0.55}px), calc(-50% + ${y * 0.2}px)) rotate(${360 + Math.random() * 540}deg) scale(1)`
+						},
+						{
+							opacity: 0,
+							transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) rotate(${720 + Math.random() * 720}deg) scale(0.7)`
+						}
+					],
+					{
+						duration: 1300 + Math.random() * 1100,
+						easing: 'cubic-bezier(0.15, 0.75, 0.25, 1)',
+						fill: 'forwards'
+					}
+				)
+				.finished.finally(() => piece.remove());
+		}
+	}
+
+	function bindResumeConfetti() {
+		const link = document.querySelector('.resume-download');
+		if (!(link instanceof HTMLAnchorElement) || link.dataset.confettiBound) return;
+
+		link.dataset.confettiBound = 'true';
+		link.addEventListener('click', () => launchResumeConfetti(link));
+	}
+
+	bindResumeConfetti();
+	document.addEventListener('astro:page-load', bindResumeConfetti);
+</script>
+
+<style>
+	:global(.resume-confetti) {
+		position: fixed;
+		z-index: 9999;
+		display: block;
+		pointer-events: none;
+		will-change: transform, opacity;
+	}
+
+	.skill-card,
+	section[aria-labelledby='skills-heading'] :global(.grid > div) {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		border: 1px solid var(--surface-border);
+		border-radius: 0.9rem;
+		background: var(--surface-muted);
+		padding: 1rem 1.1rem;
+		color: color-mix(in oklab, var(--color-base-content) 68%, transparent);
+		line-height: 1.55;
+	}
+
+	section[aria-labelledby='skills-heading'] :global(strong) {
+		color: var(--color-base-content);
+		font-size: 0.8rem;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+</style>
